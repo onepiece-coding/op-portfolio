@@ -25,7 +25,7 @@ Built as a showcase of our own engineering standards: performance-first architec
 | | Name | Role |
 |---|---|---|
 | **LA** | Lahcen Alhiane | Frontend Lead — React & TypeScript |
-| **MB** | Mohammed BouDreya | Backend Lead — Node.js & MongoDB |
+| **MB** | Mohamed Bouderya | Backend Lead — Node.js & MongoDB |
 
 ---
 
@@ -40,6 +40,7 @@ Built as a showcase of our own engineering standards: performance-first architec
 | Redux Toolkit | Predictable async state management |
 | CSS Modules | Scoped, zero-runtime styling |
 | Vite | Build tooling & local dev server |
+| Vitest/RTL | Testing (Unit, Integration) |
 
 ### Backend (featured projects)
 | Technology | Purpose |
@@ -47,7 +48,9 @@ Built as a showcase of our own engineering standards: performance-first architec
 | Node.js | Server runtime |
 | Express | REST API framework |
 | MongoDB | Document database |
+| MySQL | Relational database |
 | TypeScript | Shared type contracts |
+| Jest/Vitest | Testing (Unit, Integration) |
 
 ---
 
