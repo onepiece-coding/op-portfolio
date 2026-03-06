@@ -18,6 +18,7 @@ export default defineConfig({
       // "@components": path.resolve(__dirname, "./src/components"),
     },
   },
+  base: "/op-portfolio/",
   server: {
     port: 3000,
   },
