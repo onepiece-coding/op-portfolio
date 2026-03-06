@@ -19,11 +19,10 @@
         const hash = query.get("h");
 
         if (path) {
-          // Remove the redirect params and restore the real URL
-          // before React Router initialises
+          const base = window.location.pathname.replace(/\\\/+$/, ""); // strip trailing slashes
           const cleanUrl =
-            window.location.pathname +
-            path +
+            base +
+            decodeURIComponent(path) +
             (hash ? decodeURIComponent(hash) : "");
 
           window.history.replaceState(null, "", cleanUrl);
