@@ -1,6 +1,8 @@
 name: Deploy OnePiece Coding Portfolio To Github Pages
 
+# This ci/cd pipeline triggered on push code to repository (main branche)
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
