@@ -18,7 +18,7 @@ export default defineConfig({
       // "@components": path.resolve(__dirname, "./src/components"),
     },
   },
-  base: "/onepiece-coding/",
+  base: "/op-portfolio/",
   server: {
     port: 3000,
   },
