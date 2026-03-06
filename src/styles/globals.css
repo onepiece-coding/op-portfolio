@@ -80,6 +80,18 @@ button {
   opacity: 0;
 }
 
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
 /* Focus styles */
 
 :focus {

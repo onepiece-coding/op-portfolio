@@ -2,7 +2,7 @@
  * @file src/styles/variables.module.css
  */
 
-:global(:root) {
+:root {
   /* colors */
   --color-electric-purple: #7b3cff;
   --color-indigo-600: #4b2b97;
@@ -50,16 +50,4 @@
   /* transitions */
   --ease-fast: cubic-bezier(0.2, 0.9, 0.3, 1);
   --ease-smooth: cubic-bezier(0.22, 0.9, 0.35, 1);
-}
-
-:global(.visually-hidden) {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: -1px;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  border: 0;
 }

@@ -7,7 +7,7 @@ import { StrictMode } from "react";
 
 import AppRouter from "./routes/app-router";
 
-import "./styles/variables.module.css";
+import "./styles/variables.css";
 import "./styles/globals.css";
 
 createRoot(document.getElementById("root")!).render(
