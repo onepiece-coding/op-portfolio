@@ -11,6 +11,39 @@
       content="OnePiece Coding: React + TypeScript frontends and Node.js backends. We build high-performance MVPs, CMSs and dashboards with a zero-bloat approach. Book a technical brief."
     />
     <title>OnePiece Coding — Frontend + Backend Strike Team</title>
+    <!-- SPA redirect restore: decode path encoded by 404.html -->
+    <script>
+      (function () {
+        const query = new URLSearchParams(window.location.search);
+        const path = query.get("p");
+        const hash = query.get("h");
+
+        if (path) {
+          // Remove the redirect params and restore the real URL
+          // before React Router initialises
+          const cleanUrl =
+            window.location.pathname +
+            path +
+            (hash ? decodeURIComponent(hash) : "");
+
+          window.history.replaceState(null, "", cleanUrl);
+        }
+      })();
+    </script>
+    <!-- 
+      ## How It Works
+      User refreshes /op-portfolio/duo
+        ↓
+      GitHub serves 404.html (no file found)
+        ↓
+      404.html encodes "/duo" → redirects to /op-portfolio/?p=%2Fduo
+        ↓
+      GitHub serves index.html (root path exists)
+        ↓
+      index.html script decodes "%2Fduo" → replaceState("/op-portfolio/duo")
+        ↓
+      React Router sees /op-portfolio/duo → renders DuoPage 
+    -->
   </head>
   <body>
     <div id="root"></div>
