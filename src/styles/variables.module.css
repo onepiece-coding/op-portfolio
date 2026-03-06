@@ -1,0 +1,65 @@
+/**
+ * @file src/styles/variables.module.css
+ */
+
+:global(:root) {
+  /* colors */
+  --color-electric-purple: #7b3cff;
+  --color-indigo-600: #4b2b97;
+  --color-deep-navy: #0b1220;
+  --color-gray-900: #0f1724;
+  --color-gray-700: #374151;
+  --color-gray-500: #6b7280;
+  --color-gray-300: #d1d5db;
+  --color-gray-100: #f3f4f6;
+  --color-white: #ffffff;
+
+  /* semantic */
+  --bg: var(--color-white);
+  --text: var(--color-gray-900);
+  --muted: var(--color-gray-500);
+
+  /* spacing (4px base) */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* navbar */
+  --navbar-height: 72px; /* change as needed */
+
+  /* type scale */
+  --type-xxl: 48px;
+  --type-xl: 32px;
+  --type-lg: 24px;
+  --type-md: 18px;
+  --type-sm: 14px;
+  --type-xs: 12px;
+
+  /* radius & shadows */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --rounded: 50%;
+  --card-shadow: 0 6px 18px rgba(11, 17, 32, 0.12);
+
+  /* transitions */
+  --ease-fast: cubic-bezier(0.2, 0.9, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.22, 0.9, 0.35, 1);
+}
+
+:global(.visually-hidden) {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}

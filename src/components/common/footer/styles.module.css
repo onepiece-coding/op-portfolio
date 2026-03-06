@@ -1,0 +1,8 @@
+.footerContainer {
+  background: linear-gradient(
+    90deg,
+    rgba(11, 17, 32, 0.02),
+    rgba(123, 60, 255, 0.02)
+  );
+  text-align: center;
+}

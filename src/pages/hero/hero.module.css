@@ -1,0 +1,278 @@
+/**
+ * @file src/pages/hero/hero.module.css
+ */
+
+.hero {
+  padding: var(--space-6) var(--space-4);
+  min-height: 100%;
+  display: flex;
+}
+
+.inner {
+  grid-template-columns: 1fr 420px;
+  max-width: var(--app-max-width);
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+  align-items: center;
+  gap: var(--space-6);
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+}
+
+.left {
+  flex-direction: column;
+  gap: var(--space-4);
+  display: flex;
+}
+
+.kicker {
+  color: var(--color-electric-purple);
+  letter-spacing: 0.6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.title {
+  color: var(--color-gray-900);
+  font-size: var(--type-xl);
+  line-height: 1.04;
+  margin: 0;
+}
+
+.lead {
+  color: var(--color-gray-700);
+  font-size: var(--type-md);
+  max-width: 62ch;
+}
+
+.socialRow {
+  margin-top: var(--space-3);
+  gap: var(--space-3);
+  display: flex;
+}
+
+.socialBtn {
+  background: linear-gradient(180deg, var(--color-white), #fbfdff);
+  box-shadow: 0 6px 18px rgba(11, 17, 32, 0.06);
+  border: 1px solid rgba(11, 17, 32, 0.06);
+  transition:
+    transform 180ms var(--ease-fast),
+    box-shadow 180ms var(--ease-fast);
+  color: var(--color-deep-navy);
+  border-radius: var(--rounded);
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  height: 46px;
+  width: 46px;
+}
+
+.socialBtn:hover {
+  box-shadow: 0 12px 26px rgba(11, 17, 32, 0.12);
+  transform: translateY(-6px) scale(1.04);
+}
+
+.socialIcon svg {
+  display: block;
+}
+
+.techList {
+  margin: var(--space-4) 0 0 0;
+  color: var(--color-gray-500);
+  gap: var(--space-3);
+  list-style: none;
+  font-size: 13px;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0;
+}
+
+.right {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.logoWrap {
+  place-items: center;
+  position: relative;
+  height: 260px;
+  display: grid;
+  width: 260px;
+}
+
+.logoCircle {
+  background: linear-gradient(
+    135deg,
+    var(--color-deep-navy),
+    var(--color-electric-purple)
+  );
+  box-shadow: var(--card-shadow);
+  color: var(--color-white);
+  border-radius: 999px;
+  place-items: center;
+  position: relative;
+  font-weight: 700;
+  display: grid;
+  height: 140px;
+  width: 140px;
+  z-index: 4;
+}
+
+.logoText {
+  letter-spacing: 0.6px;
+  font-size: 26px;
+}
+
+.orbit {
+  animation: orbitRotate 18s linear infinite;
+  transform-origin: center;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  height: 260px;
+  width: 260px;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+
+.skillBadge {
+  background: linear-gradient(180deg, var(--color-white), #fbfdff);
+  box-shadow: 0 10px 20px rgba(11, 17, 32, 0.06);
+  border: 1px solid rgba(11, 17, 32, 0.06);
+  transform: translate(-50%, -50%);
+  color: var(--color-deep-navy);
+  border-radius: 999px;
+  pointer-events: auto;
+  place-items: center;
+  position: absolute;
+  display: grid;
+  height: 48px;
+  width: 48px;
+  z-index: 3;
+}
+
+.skillInner {
+  border-radius: 999px;
+  place-items: center;
+  display: grid;
+  height: 100%;
+  width: 100%;
+}
+
+.orbit > .skillBadge:nth-child(1) {
+  /* 0deg, right */
+  left: calc(50% + 110px);
+  top: 50%;
+}
+
+.orbit > .skillBadge:nth-child(2) {
+  /* 45deg */
+  left: calc(50% + 78px);
+  top: calc(50% + 78px);
+}
+
+.orbit > .skillBadge:nth-child(3) {
+  /* 90deg, bottom */
+  left: 50%;
+  top: calc(50% + 110px);
+}
+
+.orbit > .skillBadge:nth-child(4) {
+  /* 135deg */
+  left: calc(50% - 78px);
+  top: calc(50% + 78px);
+}
+
+.orbit > .skillBadge:nth-child(5) {
+  /* 180deg, left */
+  left: calc(50% - 110px);
+  top: 50%;
+}
+
+.orbit > .skillBadge:nth-child(6) {
+  /* 225deg */
+  left: calc(50% - 78px);
+  top: calc(50% - 78px);
+}
+
+.orbit > .skillBadge:nth-child(7) {
+  /* 270deg, top */
+  left: 50%;
+  top: calc(50% - 110px);
+}
+
+.orbit > .skillBadge:nth-child(8) {
+  /* 315deg */
+  left: calc(50% + 78px);
+  top: calc(50% - 78px);
+}
+
+.hero:hover .orbit {
+  animation-duration: 10s;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .hero {
+    padding-top: calc(var(--space-6) + 24px);
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .right {
+    margin-bottom: var(--space-4);
+    order: -1;
+  }
+
+  .title {
+    font-size: var(--type-lg);
+  }
+
+  .logoWrap {
+    height: 220px;
+    width: 220px;
+  }
+
+  .orbit {
+    height: 220px;
+    width: 220px;
+  }
+
+  .logoCircle {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+/* Accessibility */
+
+.socialBtn:focus-visible {
+  outline: 3px solid rgba(123, 60, 255, 0.5);
+  outline-offset: 3px;
+}
+
+/* performance hint */
+
+.orbit {
+  will-change: transform;
+}
+
+/* Animation keyframes */
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,38 @@
+name: Deploy OnePiece Coding Portfolio To Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # This job has to run on some runner
+  # Github already provides a lot of runners
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout The Repository
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      # Install Dependencies
+      - name: Install Dependencies
+        run: npm install
+
+      # Build The Project
+      - name: Build The Project
+        run: npm run build
+
+      # Deploy To Github Pages
+      - name: Deploy To Github Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist

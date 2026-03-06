@@ -1,0 +1,36 @@
+/**
+ * @file src/components/common/navbar/brand/brand.module.css
+ */
+
+.brand {
+  align-items: center;
+  gap: var(--space-2);
+  display: flex;
+}
+
+.logo {
+  box-shadow: var(--card-shadow);
+  background: linear-gradient(
+    135deg,
+    var(--color-deep-navy),
+    var(--color-electric-purple)
+  );
+  color: var(--color-white);
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  height: 40px;
+  width: 40px;
+}
+
+.brandName {
+  font-weight: 700;
+}
+
+.brandTagline {
+  font-size: var(--type-xs);
+  color: var(--muted);
+}

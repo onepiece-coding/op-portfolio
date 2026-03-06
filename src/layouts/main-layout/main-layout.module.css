@@ -1,0 +1,15 @@
+/**
+ * @file src/layouts/main-layout/main-layout.module.css
+ */
+
+.layoutRoot {
+  background: linear-gradient(180deg, var(--color-white) 0%, #fbfdff 100%);
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+}
+
+.main {
+  overflow: auto;
+  flex: 1;
+}
