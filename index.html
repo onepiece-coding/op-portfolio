@@ -19,9 +19,8 @@
         const hash = query.get("h");
 
         if (path) {
-          const base = window.location.pathname.replace(/\\\/+$/, ""); // strip trailing slashes
           const cleanUrl =
-            base +
+            "/op-portfolio" +
             decodeURIComponent(path) +
             (hash ? decodeURIComponent(hash) : "");
 
