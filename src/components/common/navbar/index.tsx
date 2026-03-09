@@ -3,6 +3,7 @@
  */
 
 import { useFocusOnOpen, useKeyboardDismiss, useScrollLock } from "@/hooks";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { NAV_ITEMS } from "./navbar.data";
 import { useRef, useState } from "react";
@@ -12,6 +13,7 @@ import MobileMenu from "./mobile-menu";
 import NavBrand from "./brand";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
@@ -28,7 +30,7 @@ export const Navbar = () => {
 
         {/* desktop nav links */}
         <div
-          aria-label="Site Navigation"
+          aria-label={t("navbar.linksAriaLabel")}
           className={styles.navLinks}
           role="navigation"
         >
@@ -40,14 +42,16 @@ export const Navbar = () => {
                 `${styles.link} ${isActive ? styles.linkActive : ""}`
               }
             >
-              {item.label}
+              {t(item.labelKey)}
             </NavLink>
           ))}
         </div>
 
         {/* hamburger for mobile */}
         <button
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={
+            open ? t("navbar.hamburgerClose") : t("navbar.hamburgerOpen")
+          }
           onClick={() => setOpen((v) => !v)}
           className={styles.hamburger}
           aria-controls={mobileMenuId}

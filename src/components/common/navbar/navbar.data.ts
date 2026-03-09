@@ -3,15 +3,15 @@
  */
 
 interface NavITEM {
-  readonly label: string;
+  readonly labelKey: string;
   readonly to: string;
 }
 
 export const NAV_ITEMS = [
-  { to: "/", label: "Hero" },
-  { to: "/duo", label: "Duo" },
-  { to: "/projects", label: "Projects" },
-  { to: "/services", label: "Services" },
-  { to: "/testimonials", label: "Testimonials" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", labelKey: "nav.home" },
+  { to: "/duo", labelKey: "nav.team" },
+  { to: "/projects", labelKey: "nav.projects" },
+  { to: "/services", labelKey: "nav.services" },
+  { to: "/testimonials", labelKey: "nav.testimonials" },
+  { to: "/contact", labelKey: "nav.contact" },
 ] as const satisfies readonly NavITEM[];

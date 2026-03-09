@@ -38,8 +38,15 @@
   grid-template-columns: 1fr;
   gap: var(--space-5);
   list-style: none;
-  padding-left: 0;
   display: grid;
+}
+
+[dir="ltr"] .grid {
+  padding-left: 0;
+}
+
+[dir="rtl"] .grid {
+  padding-right: 0;
 }
 
 .ctaRow {

@@ -1,3 +1,7 @@
+/**
+ * @file src/components/ui/badge/index.tsx
+ */
+
 import styles from "./badge.module.css";
 
 type BadgeElement = "span" | "li";

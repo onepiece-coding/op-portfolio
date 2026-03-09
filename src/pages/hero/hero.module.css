@@ -3,9 +3,9 @@
  */
 
 .hero {
-  padding: var(--space-6) var(--space-4);
-  min-height: 100%;
-  display: flex;
+  padding: var(--space-8) var(--space-4);
+  /* min-height: 100%;
+  display: flex; */
 }
 
 .inner {

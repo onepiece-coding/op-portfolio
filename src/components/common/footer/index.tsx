@@ -2,23 +2,23 @@
  * @file src/components/common/footer/index.tsx
  */
 
+import { useTranslation } from "react-i18next";
 import { BUILD_YEAR } from "@/lib/build-info";
 
+import LangSwitcher from "../lang-switcher";
 import styles from "./styles.module.css";
 
-const { footerContainer } = styles;
+const Footer = () => {
+  const { t } = useTranslation();
 
-interface FooterProps {
-  companyName?: string;
-}
-
-const Footer = ({ companyName = "OnePiece Coding" }: FooterProps) => {
   return (
-    <footer className={footerContainer}>
-      <div className="container">
-        <p>
-          © {BUILD_YEAR} {companyName}. All rights reserved.
-        </p>
+    <footer
+      className={styles.footerContainer}
+      aria-label={t("footer.ariaLabel")}
+    >
+      <div className={`container ${styles.footerRow}`}>
+        <p>{t("footer.copyright", { year: BUILD_YEAR })}</p>
+        <LangSwitcher />
       </div>
     </footer>
   );

@@ -56,9 +56,16 @@
 .splitCol ul {
   flex-direction: column;
   gap: var(--space-3);
-  padding-left: 1em;
   display: flex;
   margin: 0;
+}
+
+[dir="ltr"] .splitCol ul {
+  padding-left: 1.1em;
+}
+
+[dir="rtl"] .splitCol ul {
+  padding-right: 1.1em;
 }
 
 .splitCol ul li {

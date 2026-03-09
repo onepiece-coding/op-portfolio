@@ -147,6 +147,14 @@
   width: 40px;
 }
 
+[dir="rtl"] .controlBtn:first-of-type {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .controlBtn:last-of-type {
+  transform: rotate(180deg);
+}
+
 .controlBtn:focus-visible {
   outline: 3px solid rgba(123, 60, 255, 0.6);
   outline-offset: 3px;

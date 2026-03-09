@@ -3,20 +3,20 @@
  */
 
 import { CONTACT_METHODS, HIRE_CARDS } from "./contact.data";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui";
 
+import ContactMethod from "./contact-method";
 import styles from "./contact.module.css";
 import HireCard from "./hire-card";
-import ContactMethod from "./contact-method";
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <title>Contact — Hire OnePiece Coding (Frontend & Backend)</title>
-      <meta
-        name="description"
-        content="We’re open for freelance projects and roles. Contact OnePiece Coding via WhatsApp, LinkedIn or email for MVPs, audits, and part/full-time frontend or backend work."
-      />
+      <title>{t("contact.pageTitle")}</title>
+      <meta name="description" content={t("contact.metaDescription")} />
 
       <section
         className={`${styles.page} page-in`}
@@ -26,19 +26,14 @@ const ContactPage = () => {
         <div className={styles.container}>
           <header className={styles.header}>
             <h1 id="contact-heading" className={styles.title}>
-              We&apos;re Open for Business
+              {t("contact.h1")}
             </h1>
-            <p className={styles.lead}>
-              OnePiece Coding is available for freelance projects, contract
-              roles, and short-term audits. We pair performance-minded frontends
-              with pragmatic, efficient backends to ship fast and keep costs
-              predictable.
-            </p>
+            <p className={styles.lead}>{t("contact.lead")}</p>
           </header>
 
           <section aria-labelledby="methods-heading">
             <h2 id="methods-heading" className={styles.sectionSubtitle}>
-              Contact methods
+              {t("contact.contactMethodsH2")}
             </h2>
 
             <div className={styles.methodsGrid}>
@@ -50,28 +45,25 @@ const ContactPage = () => {
 
           <section className={styles.hiring} aria-labelledby="hiring-heading">
             <h2 id="hiring-heading" className={styles.sectionSubtitle}>
-              Hiring & Roles
+              {t("contact.hiringH2")}
             </h2>
 
             <div className={styles.hireGrid}>
               {HIRE_CARDS.map((hireCard) => (
-                <HireCard key={hireCard.id} {...hireCard} />
+                <HireCard key={hireCard.id} id={hireCard.id} />
               ))}
             </div>
           </section>
 
           <div className={styles.ctaRow}>
-            <Button to="/duo">Want to know more about us?</Button>
+            <Button to="/duo">{t("contact.ctaPrimary")}</Button>
             <Button to="/projects" variant="ghost">
-              See collaborative projects
+              {t("contact.ctaGhost")}
             </Button>
           </div>
 
           <footer className={styles.footer}>
-            <p className={styles.footerNote}>
-              Want a short scoping note? Send a DM or email with a brief
-              description and we’ll reply with next steps.
-            </p>
+            <p className={styles.footerNote}>{t("contact.footerNote")}</p>
           </footer>
         </div>
       </section>

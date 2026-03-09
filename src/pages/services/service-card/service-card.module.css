@@ -43,8 +43,15 @@
   margin: var(--space-3) 0 0 0;
   flex-direction: column;
   gap: var(--space-3);
-  padding-left: 1em;
   display: flex;
+}
+
+[dir="ltr"] .cardList {
+  padding-left: 1.1em;
+}
+
+[dir="rtl"] .cardList {
+  padding-right: 1.1em;
 }
 
 .cardList li {

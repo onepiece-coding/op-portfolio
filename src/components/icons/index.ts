@@ -15,6 +15,7 @@ import StatsIcon from "./StatsIcon";
 import ReactIcon from "./ReactIcon";
 import NodeIcon from "./NodeIcon";
 import StarIcon from "./StarIcon";
+import SQLIcon from "./SQLIcon";
 
 export {
   ExclamationCircleIcon,
@@ -34,4 +35,5 @@ export {
   StatsIcon,
   NodeIcon,
   StarIcon,
+  SQLIcon,
 };

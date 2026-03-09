@@ -2,6 +2,7 @@
  * @file src/pages/services/index.tsx
  */
 
+import { useTranslation } from "react-i18next";
 import { SERVICES } from "./services.data";
 import { Button } from "@/components/ui";
 
@@ -9,13 +10,12 @@ import styles from "./services.module.css";
 import ServiceCard from "./service-card";
 
 const ServicesPage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <title>Services — MVP, Scaling & Performance Audits</title>
-      <meta
-        name="description"
-        content="Services from OnePiece Coding: MVP delivery in weeks, full-stack scaling, and prioritized performance audits. Outcome-focused plans with measurable impact estimates."
-      />
+      <title>{t("services.pageTitle")}</title>
+      <meta name="description" content={t("services.metaDescription")} />
       <section
         id="services"
         className={`${styles.page} page-in`}
@@ -24,16 +24,15 @@ const ServicesPage = () => {
         <div className={styles.containerInner}>
           <header className={styles.header}>
             <h1 id="services-heading" className={styles.heading}>
-              Services — What we do for high-performance products
+              {t("services.h1")}
             </h1>
-            <p className={styles.lead}>
-              We offer opinionated, outcome-focused services: ship fast with a
-              solid MVP, scale safely as traffic grows, and reduce frontend &
-              backend bloat with a prioritized remediation roadmap.
-            </p>
+            <p className={styles.lead}>{t("services.lead")}</p>
           </header>
 
-          <ul aria-label="Service offerings" className={styles.grid}>
+          <ul
+            aria-label={t("services.serviceListAriaLabel")}
+            className={styles.grid}
+          >
             {SERVICES.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -44,33 +43,29 @@ const ServicesPage = () => {
             aria-labelledby="engagement-heading"
           >
             <h2 className={styles.smallHeading} id="engagement-heading">
-              How we engage?
+              {t("services.howItWorks.h2")}
             </h2>
             <ol className={styles.steps}>
               <li>
-                <strong>Scope (1–2 hours)</strong> — technical brief to define
-                goals, constraints, and success metrics.
+                <strong>{t("services.howItWorks.step1Strong")}</strong>
+                {t("services.howItWorks.step1Text")}
               </li>
               <li>
-                <strong>Audit & plan</strong> — prioritized P0→P3 fixes with
-                impact estimates.
+                <strong>{t("services.howItWorks.step2Strong")}</strong>
+                {t("services.howItWorks.step2Text")}
               </li>
               <li>
-                <strong>Execute</strong> — implementation sprint(s) or handoff
-                with clear tests and benchmarks.
+                <strong>{t("services.howItWorks.step3Strong")}</strong>
+                {t("services.howItWorks.step3Text")}
               </li>
             </ol>
             <div className={styles.howCta}>
-              <Button to="/contact">Start a technical brief</Button>
+              <Button to="/contact">{t("services.howItWorks.cta")}</Button>
             </div>
           </section>
 
           <footer className={styles.footer}>
-            <p className={styles.footerNote}>
-              Pricing & timeline are tailored — we prefer transparent,
-              milestone-driven engagement. For typical MVP work we provide a
-              fixed-scope estimate after the scoping call.
-            </p>
+            <p className={styles.footerNote}>{t("services.footerNote")}</p>
           </footer>
         </div>
       </section>

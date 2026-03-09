@@ -3,6 +3,7 @@
  */
 
 import { TESTIMONIALS } from "./testimonials.data";
+import { useTranslation } from "react-i18next";
 import { getInitials } from "@/lib/dom-utils";
 import { Button } from "@/components/ui";
 import { useCarousel } from "@/hooks";
@@ -12,6 +13,8 @@ import styles from "./testimonials.module.css";
 import StarRow from "./star-row";
 
 const TestimonialsPage = () => {
+  const { t } = useTranslation();
+
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const { index, goNext, goPrev, goTo } = useCarousel({
@@ -21,11 +24,8 @@ const TestimonialsPage = () => {
 
   return (
     <>
-      <title>Testimonials — Clients & Results | OnePiece Coding</title>
-      <meta
-        name="description"
-        content="What product teams say about OnePiece Coding: faster TTI, smaller client payloads, and predictable infrastructure costs. Read client testimonials and impact highlights."
-      />
+      <title>{t("testimonials.pageTitle")}</title>
+      <meta name="description" content={t("testimonials.metaDescription")} />
 
       <section
         aria-labelledby="testimonials-heading"
@@ -35,25 +35,21 @@ const TestimonialsPage = () => {
         <div className={styles.container}>
           <header className={styles.header}>
             <h1 id="testimonials-heading" className={styles.title}>
-              Trusted by product teams who need performance and clarity
+              {t("testimonials.h1")}
             </h1>
-            <p className={styles.lead}>
-              We pair frontend precision with backend pragmatism to reduce
-              client bloat, improve time-to-interactive, and deliver predictable
-              infrastructure costs. See what product teams say about working
-              with us.
-            </p>
+            <p className={styles.lead}>{t("testimonials.lead")}</p>
           </header>
 
           <div
+            aria-label={t("testimonials.carouselAriaLabel")}
             className={styles.carouselWrap}
-            aria-label="Client testimonials"
             aria-roledescription="carousel"
             ref={carouselRef}
           >
             <div className={styles.carousel}>
               {TESTIMONIALS.map((testimonial, i) => {
                 const active = i === index;
+                const key = testimonial.translationKey;
                 return (
                   <article
                     className={`${styles.card} ${active ? styles.active : ""}`}
@@ -64,7 +60,7 @@ const TestimonialsPage = () => {
                     role="tabpanel"
                   >
                     <blockquote className={styles.quote}>
-                      {testimonial.quote}
+                      {t(`testimonials.clients.${key}.quote`)}
                     </blockquote>
 
                     <div className={styles.meta}>
@@ -75,7 +71,8 @@ const TestimonialsPage = () => {
                         <div>
                           <div className={styles.name}>{testimonial.name}</div>
                           <div className={styles.role}>
-                            {testimonial.role} — {testimonial.company}
+                            {t(`testimonials.clients.${key}.role`)} —{" "}
+                            {t(`testimonials.clients.${key}.company`)}
                           </div>
                         </div>
                       </div>
@@ -92,7 +89,7 @@ const TestimonialsPage = () => {
             <div className={styles.controls}>
               <button
                 onClick={goPrev}
-                aria-label="Previous testimonial"
+                aria-label={t("testimonials.prevAriaLabel")}
                 className={styles.controlBtn}
               >
                 <svg
@@ -111,14 +108,16 @@ const TestimonialsPage = () => {
               </button>
 
               <div
-                aria-label="Testimonial tabs"
+                aria-label={t("testimonials.tablistAriaLabel")}
                 className={styles.dots}
                 role="tablist"
               >
                 {TESTIMONIALS.map((testimonial, i) => (
                   <button
                     className={`${styles.dot} ${i === index ? styles.dotActive : ""}`}
-                    aria-label={`Go to testimonial by ${testimonial.name}`}
+                    aria-label={t(
+                      `testimonials.clients.${testimonial.translationKey}.dotAriaLabel`,
+                    )}
                     aria-controls={`testimonial-${testimonial.id}`}
                     aria-selected={i === index}
                     onClick={() => goTo(i)}
@@ -129,9 +128,9 @@ const TestimonialsPage = () => {
               </div>
 
               <button
-                onClick={goNext}
-                aria-label="Next testimonial"
+                aria-label={t("testimonials.nextAriaLabel")}
                 className={styles.controlBtn}
+                onClick={goNext}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,17 +150,14 @@ const TestimonialsPage = () => {
           </div>
 
           <div className={styles.ctaRow}>
-            <Button to="/contact">Start a technical brief</Button>
+            <Button to="/contact">{t("testimonials.ctaPrimary")}</Button>
             <Button to="/projects" variant="ghost">
-              See collaborative projects
+              {t("testimonials.ctaGhost")}
             </Button>
           </div>
 
           <footer className={styles.footer}>
-            <p className={styles.footerNote}>
-              Testimonials are representative client quotes. We can provide
-              redacted references and audit reports on request.
-            </p>
+            <p className={styles.footerNote}>{t("testimonials.footerNote")}</p>
           </footer>
         </div>
       </section>

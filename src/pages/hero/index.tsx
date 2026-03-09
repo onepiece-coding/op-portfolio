@@ -2,18 +2,24 @@
  * @file src/pages/hero/index.tsx
  */
 
+import { useTranslation } from "react-i18next";
 import { SKILLS, SOCIAL } from "./hero.data";
 
 import styles from "./hero.module.css";
 
+const SOCIAL_ARIA_KEYS: Record<string, string> = {
+  LinkedIn: "hero.socialLinkedIn",
+  GitHub: "hero.socialGitHub",
+  Email: "hero.socialEmail",
+};
+
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <title>OnePiece Coding — Frontend + Backend Strike Team</title>
-      <meta
-        name="description"
-        content="OnePiece Coding: React + TypeScript frontends and Node.js backends. We build high-performance MVPs, CMSs and dashboards with a zero-bloat approach. Book a technical brief."
-      />
+      <title>{t("hero.pageTitle")}</title>
+      <meta name="description" content={t("hero.metaDescription")} />
 
       <section
         className={`${styles.hero} page-in`}
@@ -22,27 +28,23 @@ const Hero = () => {
       >
         <div className={styles.inner}>
           <div className={styles.left}>
-            <div className={`${styles.kicker}`}>
-              Frontend + Backend Strike Team
-            </div>
+            <div className={`${styles.kicker}`}>{t("hero.kicker")}</div>
 
             <h1 id="hero-heading" className={`${styles.title}`}>
-              Frontend + Backend Strike Team — build blazing-fast products, ship
-              faster.
+              {t("hero.h1")}
             </h1>
 
-            <p className={`${styles.lead}`}>
-              OnePiece Coding accelerates product-market fit with clean React
-              frontends, scalable Node APIs, and a zero-bloat delivery approach.
-              From MVP to scale — we own both sides.
-            </p>
+            <p className={`${styles.lead}`}>{t("hero.lead")}</p>
 
-            <nav className={`${styles.socialRow}`} aria-label="Social links">
+            <nav
+              className={`${styles.socialRow}`}
+              aria-label={t("hero.socialNavAriaLabel")}
+            >
               {SOCIAL.map(({ label, href, Icon }) => (
                 <a
+                  aria-label={t(SOCIAL_ARIA_KEYS[label] ?? label)}
                   className={styles.socialBtn}
                   rel="noopener noreferrer"
-                  aria-label={label}
                   target="_blank"
                   key={label}
                   href={href}
@@ -55,9 +57,9 @@ const Hero = () => {
             </nav>
 
             <ul className={`${styles.techList}`}>
-              <li>React · TypeScript</li>
-              <li>Node.js · Express · MongoDB</li>
-              <li>Zero-Bloat · Performance First</li>
+              <li>{t("hero.tech1")}</li>
+              <li>{t("hero.tech2")}</li>
+              <li>{t("hero.tech3")}</li>
             </ul>
           </div>
 
@@ -66,14 +68,22 @@ const Hero = () => {
               <div className={styles.logoCircle} aria-hidden="true">
                 <span className={styles.logoText}>OP</span>
               </div>
+              {/* <img
+                src="/op-portfolio/logo-test.png"
+                alt="OnePiece Coding"
+                style={{
+                  width: "200px",
+                  marginTop: "10px",
+                }}
+              /> */}
 
               <div className={styles.orbit} aria-hidden="true">
                 {SKILLS.map(({ key, label, Icon }) => (
                   <div
-                    key={key}
                     className={styles.skillBadge}
-                    title={label}
                     aria-hidden="true"
+                    title={label}
+                    key={key}
                   >
                     <div className={styles.skillInner}>
                       <Icon />

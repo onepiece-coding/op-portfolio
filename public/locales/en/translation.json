@@ -1,0 +1,301 @@
+{
+  "nav": {
+    "home": "Home",
+    "team": "Our Team",
+    "projects": "Projects",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "navbar": {
+    "ariaLabel": "Primary",
+    "linksAriaLabel": "Main navigation",
+    "hamburgerOpen": "Open navigation menu",
+    "hamburgerClose": "Close navigation menu"
+  },
+  "brand": {
+    "name": "OnePiece Coding",
+    "tagline": "Full-Stack React & Node.js Studio"
+  },
+  "mobileMenu": {
+    "ariaLabel": "Site navigation",
+    "navAriaLabel": "Mobile site navigation",
+    "closeAriaLabel": "Close navigation menu",
+    "footerText": "Have a project in mind?",
+    "footerLink": "Start a brief →"
+  },
+  "langSwitcher": {
+    "groupAriaLabel": "Select language",
+    "en": "Switch language to English",
+    "fr": "Switch language to French",
+    "ar": "Switch language to Arabic"
+  },
+  "hero": {
+    "pageTitle": "OnePiece Coding — React & Node.js Full-Stack Studio",
+    "metaDescription": "React & TypeScript frontends paired with Node.js backends. OnePiece Coding builds tested, accessible, high-performance MVPs and products. Book a technical brief.",
+    "kicker": "React & Node.js · Full-Stack Engineering Studio",
+    "h1": "We build products that are fast, tested, and built to scale.",
+    "lead": "OnePiece Coding ships clean React frontends and efficient Node.js backends — with TypeScript end-to-end, accessibility baked in, and performance measured, not assumed.",
+    "socialLinkedIn": "Lahcen Alhiane on LinkedIn (opens in new tab)",
+    "socialGitHub": "OnePiece Coding on GitHub (opens in new tab)",
+    "socialEmail": "Send us an email",
+    "socialNavAriaLabel": "Social links",
+    "tech1": "React · TypeScript · Redux Toolkit",
+    "tech2": "Node.js · Express.js · MongoDB · MySQL",
+    "tech3": "Tested · Accessible · Performance-First"
+  },
+  "footer": {
+    "ariaLabel": "Site footer",
+    "copyright": "© {{year}} OnePiece Coding. All rights reserved."
+  },
+  "duo": {
+    "pageTitle": "Meet the Team — OnePiece Coding | React & Node.js",
+    "metaDescription": "Lahcen (React & TypeScript) and Mohamed (Node.js & MongoDB) — a coordinated full-stack duo that ships tested, accessible, high-performance products.",
+    "h1": "Two specialists. One coordinated delivery.",
+    "subhead": "Frontend decisions are shaped by API cost. Backend contracts are designed for minimal over-fetch. We plan both sides together — so nothing gets lost in handoff.",
+    "ctaPrimary": "Start a technical brief",
+    "ctaGhost": "See our projects",
+    "footerNote": "No handoff waste: UI components are built against real API contracts, agreed before a single line is written.",
+    "members": {
+      "lahcen": {
+        "name": "Lahcen Alhiane",
+        "title": "Frontend Lead — React & TypeScript",
+        "bio": "Lahcen builds pixel-accurate, resilient React interfaces. His focus is component architecture that scales, CSS Modules for predictable styles, and accessibility that doesn't get bolted on at the end.",
+        "resp1": "Component architecture & design system",
+        "resp2": "Bundle optimisation and Core Web Vitals",
+        "resp3": "Accessibility compliance and UX fidelity"
+      },
+      "mohamed": {
+        "name": "Mohamed Bouderya",
+        "title": "Backend Lead — Node.js & MongoDB",
+        "bio": "Mohamed designs scalable Node.js APIs and efficient data schemas. He focuses on low-latency endpoints, pragmatic aggregation pipelines, and systems that stay observable under load.",
+        "resp1": "API design and data modelling",
+        "resp2": "Query performance, caching, and indexing",
+        "resp3": "Logging, metrics, and operational readiness"
+      }
+    }
+  },
+  "projects": {
+    "pageTitle": "Projects — OnePiece Coding | React & Node.js Case Studies",
+    "metaDescription": "Full-stack projects by OnePiece Coding: production React frontends, Node.js APIs, tested and optimised for real-world performance. See architecture decisions and tech.",
+    "h1": "Projects built end-to-end — frontend and backend, together.",
+    "lead": "Each project below is planned, built, and shipped by both of us. Frontend component decisions are informed by API shape. Backend contracts are written for minimum client payload. No handoff waste.",
+    "keyFeaturesLabel": "Key Features",
+    "githubLinkText": "View on GitHub",
+    "demoLinkText": "View live demo",
+    "techAriaLabel": "Technologies used",
+    "ctaPrimary": "Request a performance audit",
+    "ctaGhost": "Start a project brief",
+    "footerNote": "Carrying libraries for features a native API handles just as well? We audit apps and deliver a prioritised remediation plan — no fluff, just impact estimates.",
+    "items": {
+      "op-blog": {
+        "title": "OP Blog — Production-Ready Full-Stack CMS",
+        "summary": "A full-stack blog platform built for real content operations: public-facing posts, user profile management, and an admin suite for moderation and analytics. Built with a deliberate zero-bloat philosophy — every dependency questioned, every native API preferred.",
+        "groups": [
+          {
+            "groupTitle": "User & Profile Management",
+            "features": [
+              {
+                "name": "Dynamic Profiles",
+                "description": "Users update bios and upload profile photos via Cloudinary. Profile state is managed through Redux Toolkit async thunks with clean loading and error boundaries."
+              },
+              {
+                "name": "Zero-Dependency Toasts",
+                "description": "Custom notification system built on CSS keyframe animations and crypto.randomUUID() — no toast library, no extra bundle weight."
+              },
+              {
+                "name": "Async State Management",
+                "description": "Redux Toolkit handles all async data flows — fetching, caching, and optimistic updates — without a single external data-fetching library."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Admin Suite",
+            "features": [
+              {
+                "name": "User Moderation",
+                "description": "Full CRUD operations for the user base, protected behind role-based access control."
+              },
+              {
+                "name": "Content Governance",
+                "description": "Post and category management designed for scale — with pagination, filters, and bulk actions."
+              },
+              {
+                "name": "Live Dashboard",
+                "description": "Real-time platform metrics updated on admin actions — no polling, no unnecessary re-renders."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Performance Decisions",
+            "features": [
+              {
+                "name": "Replaced Framer Motion",
+                "description": "Swapped Framer Motion for optimised CSS animations. Result: a measurably smaller bundle with no JavaScript animation overhead at runtime."
+              },
+              {
+                "name": "Replaced nanoid",
+                "description": "Removed the nanoid dependency in favour of native crypto.randomUUID() — one fewer package, identical functionality."
+              }
+            ]
+          },
+          {
+            "groupTitle": "What Makes OP Blog Different",
+            "features": [
+              {
+                "name": "Native-First Philosophy",
+                "description": "We do not reach for npm install for every small feature. Framer Motion → CSS keyframes. nanoid → crypto.randomUUID(). The result is a fast, maintainable codebase that does not drag the browser."
+              },
+              {
+                "name": "Complex State, Clean UI",
+                "description": "Redux Toolkit async thunks manage intricate flows — real-time profile updates, multi-layer content moderation — while the UI stays at 60fps with clear loading and error states."
+              },
+              {
+                "name": "Full-Stack Coordination",
+                "description": "Mohamed built a secure, well-structured Node.js and MongoDB backend. Lahcen delivered a responsive, TypeScript-first React frontend. Both sides shaped by the same product brief."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "services": {
+    "pageTitle": "Services — OnePiece Coding | MVP, Scaling & Audits",
+    "metaDescription": "MVP delivery in weeks, full-stack scaling under load, and prioritised performance audits. OnePiece Coding: outcome-focused engineering with measurable impact.",
+    "h1": "What we build, scale, and fix — and how we do it.",
+    "lead": "Three focused services built around real engineering outcomes: ship a production-ready MVP fast, make an existing product resilient under load, or get a prioritised remediation roadmap for your frontend and backend.",
+    "serviceListAriaLabel": "Service offerings",
+    "bulletsAriaLabel": "What is included",
+    "howItWorks": {
+      "h2": "How an engagement works",
+      "step1Strong": "Scope (1–2 hours)",
+      "step1Text": "— a technical brief to define goals, constraints, and measurable success criteria.",
+      "step2Strong": "Audit & plan",
+      "step2Text": "— prioritised P0 → P3 fix list with effort and impact estimates.",
+      "step3Strong": "Execute",
+      "step3Text": "— implementation sprint, or a clean handoff with tests and benchmarks included.",
+      "cta": "Start a technical brief"
+    },
+    "footerNote": "Pricing and timeline are scoped per engagement. For MVP work we provide a fixed-scope estimate after the scoping call — no open-ended retainers unless you want one.",
+    "items": {
+      "mvp": {
+        "title": "MVP Delivery",
+        "subtitle": "Ship a production-ready product with tight scope and measurable outcomes.",
+        "bullets": [
+          "Opinionated stack: React + TypeScript frontend, Node.js + Express backend, MongoDB or MySQL.",
+          "Well-shaped API contracts before implementation — no over-fetch, no last-minute schema changes.",
+          "Weeks to first deploy, not months — iterative roadmap with scope-locked milestones.",
+          "Production checklist included: logging, monitoring, error boundaries, and deploy pipelines."
+        ],
+        "cta": "Book a scoping call"
+      },
+      "scaling": {
+        "title": "Full-Stack Scaling",
+        "subtitle": "Make your product handle real traffic — without rewriting it.",
+        "bullets": [
+          "API profiling and bottleneck analysis: slow queries, N+1 patterns, and missing indexes.",
+          "Queue-based workers, horizontal Node.js scaling, and autoscaling configuration guidance.",
+          "Observability plan: structured logs, lightweight metrics, and actionable alerting.",
+          "Infrastructure recommendations sized for predictable costs as traffic grows."
+        ],
+        "cta": "Discuss a scaling plan"
+      },
+      "audit": {
+        "title": "Performance Audit & Fix Plan",
+        "subtitle": "A prioritised remediation roadmap with effort estimates and measurable targets.",
+        "bullets": [
+          "Frontend: bundle analysis, critical render path, code-splitting, and asset optimisation.",
+          "Backend: query plans, index gaps, cache strategy, and response payload review.",
+          "Concrete P0 → P3 fix list — each item with estimated effort and expected impact.",
+          "Optional implementation sprint to apply the highest-priority fixes immediately."
+        ],
+        "cta": "Request an audit"
+      }
+    }
+  },
+  "testimonials": {
+    "pageTitle": "Testimonials — Real Clients & Results | OnePiece Coding",
+    "metaDescription": "Real feedback from clients who worked with OnePiece Coding: a driving school, a distribution company, and a graduation project. Honest results, honest opinions.",
+    "h1": "What our clients say — real projects, real feedback.",
+    "lead": "From booking systems to inventory management and graduation projects, we work with clients at every scale. Here is what they said after working with us.",
+    "ctaPrimary": "Start a technical brief",
+    "ctaGhost": "See our projects",
+    "footerNote": "These are genuine quotes from real clients. We can provide references on request.",
+    "carouselAriaLabel": "Client testimonials",
+    "tablistAriaLabel": "Testimonial navigation",
+    "prevAriaLabel": "Previous testimonial",
+    "nextAriaLabel": "Next testimonial",
+    "clients": {
+      "ahmed": {
+        "quote": "The booking system they built completely replaced our paper diary. Our students now book their driving lessons online at any hour, and we can see the whole week schedule at a glance. It saved us real time every single day.",
+        "role": "Driving Instructor",
+        "company": "Alhayat-DR Driving School",
+        "dotAriaLabel": "Go to testimonial by Ahmed Iben Daoud"
+      },
+      "mustapha": {
+        "quote": "Before this application, tracking stock across our grocery distribution was a constant headache. Now everything is in one place — entries, exits, suppliers, and reports. The team understood our business before they wrote a single line of code.",
+        "role": "CEO",
+        "company": "Kewoped Distribution",
+        "dotAriaLabel": "Go to testimonial by Mustapha Bougermez"
+      },
+      "asma": {
+        "quote": "My graduation project needed to handle job applications end-to-end — resume uploads, company review, and admin approval flows. They built exactly what I specified, the code was clean enough to present to my jury, and I defended it successfully.",
+        "role": "Computer Science Student — OFPPT",
+        "company": "PFE Graduation Project",
+        "dotAriaLabel": "Go to testimonial by Asma Ben Baali"
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact — Hire OnePiece Coding | Frontend & Backend",
+    "metaDescription": "Available for freelance projects, contract roles, and short-term audits. Reach OnePiece Coding via WhatsApp, LinkedIn, or email. React & Node.js engineers, remote-ready.",
+    "h1": "Let's work together.",
+    "lead": "We are available for freelance projects, contract roles, and performance audits. React frontends, Node.js backends, or both — remote-friendly and responsive within 48 hours.",
+    "contactMethodsH2": "How to reach us",
+    "hiringH2": "Open for roles",
+    "ctaPrimary": "Meet the team",
+    "ctaGhost": "See our projects",
+    "footerNote": "Send a short message with your project or role description and we will reply with next steps — usually within 48 hours.",
+    "methods": {
+      "whatsapp-lahcen": {
+        "title": "WhatsApp / Lahcen",
+        "ariaLabel": "Contact me (Lahcen Alhiane | Frontend Lead) on WhatsApp (opens in new tab)"
+      },
+      "whatsapp-mohamed": {
+        "title": "WhatsApp / Mohamed",
+        "ariaLabel": "Contact me (Mohamed Bouderya | Backend Lead) on WhatsApp (opens in new tab)"
+      },
+      "linkedin-lahcen": {
+        "title": "LinkedIn / Lahcen",
+        "ariaLabel": "Lahcen Alhiane on LinkedIn (opens in new tab)"
+      },
+      "linkedin-mohamed": {
+        "title": "LinkedIn / Mohamed",
+        "ariaLabel": "Mohamed Bouderya on LinkedIn (opens in new tab)"
+      },
+      "email": {
+        "title": "Email",
+        "ariaLabel": "Send an email to onepiece.codingpar@gmail.com"
+      },
+      "availability": {
+        "title": "Availability",
+        "meta": "Open for freelance and contract work — replies within 48 hours"
+      }
+    },
+    "hire": {
+      "lahcen": {
+        "name": "Lahcen Alhiane — Frontend Lead",
+        "role": "Frontend Engineer",
+        "description": "React & TypeScript — component architecture, performance optimisation, accessibility, CSS Modules, Vite.",
+        "availability": "Available for part-time, full-time, and remote frontend roles"
+      },
+      "mohamed": {
+        "name": "Mohamed Bouderya — Backend Lead",
+        "role": "Backend Engineer",
+        "description": "Node.js & TypeScript — API design, data modelling, aggregation pipelines, testing, observability, and scaling.",
+        "availability": "Available for part-time, full-time, and remote backend roles"
+      }
+    }
+  }
+}

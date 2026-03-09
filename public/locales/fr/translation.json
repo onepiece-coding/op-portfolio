@@ -1,0 +1,301 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "team": "Notre Équipe",
+    "projects": "Projets",
+    "services": "Services",
+    "testimonials": "Témoignages",
+    "contact": "Contact"
+  },
+  "navbar": {
+    "ariaLabel": "Navigation principale",
+    "linksAriaLabel": "Navigation du site",
+    "hamburgerOpen": "Ouvrir le menu de navigation",
+    "hamburgerClose": "Fermer le menu de navigation"
+  },
+  "brand": {
+    "name": "OnePiece Coding",
+    "tagline": "Studio Full-Stack React & Node.js"
+  },
+  "mobileMenu": {
+    "ariaLabel": "Navigation du site",
+    "navAriaLabel": "Navigation mobile du site",
+    "closeAriaLabel": "Fermer le menu de navigation",
+    "footerText": "Un projet en tête ?",
+    "footerLink": "Démarrer un brief →"
+  },
+  "langSwitcher": {
+    "groupAriaLabel": "Choisir la langue",
+    "en": "Passer en anglais",
+    "fr": "Passer en français",
+    "ar": "Passer en arabe"
+  },
+  "hero": {
+    "pageTitle": "OnePiece Coding — Studio Full-Stack React & Node.js",
+    "metaDescription": "Frontends React & TypeScript associés à des backends Node.js robustes. OnePiece Coding livre des MVPs performants, testés et accessibles. Réservez un brief technique.",
+    "kicker": "React & Node.js · Studio d'ingénierie Full-Stack",
+    "h1": "Nous construisons des produits rapides, testés et conçus pour durer.",
+    "lead": "OnePiece Coding livre des frontends React soignés et des backends Node.js efficaces — avec TypeScript de bout en bout, l'accessibilité intégrée et des performances mesurées, pas supposées.",
+    "socialLinkedIn": "Lahcen Alhiane sur LinkedIn (s'ouvre dans un nouvel onglet)",
+    "socialGitHub": "OnePiece Coding sur GitHub (s'ouvre dans un nouvel onglet)",
+    "socialEmail": "Nous envoyer un e-mail",
+    "socialNavAriaLabel": "Liens sociaux",
+    "tech1": "React · TypeScript · Redux Toolkit",
+    "tech2": "Node.js · Express.js · MongoDB · MySQL",
+    "tech3": "Testé · Accessible · Performance avant tout"
+  },
+  "footer": {
+    "ariaLabel": "Pied de page du site",
+    "copyright": "© {{year}} OnePiece Coding. Tous droits réservés."
+  },
+  "duo": {
+    "pageTitle": "L'Équipe — OnePiece Coding | React & Node.js",
+    "metaDescription": "Lahcen (React & TypeScript) et Mohamed (Node.js & MongoDB) — un duo full-stack coordonné qui livre des produits testés, accessibles et performants.",
+    "h1": "Deux spécialistes. Une livraison coordonnée.",
+    "subhead": "Les décisions frontend tiennent compte du coût API. Les contrats backend sont conçus pour un over-fetch minimal. Nous planifions les deux côtés ensemble — rien ne se perd dans les transferts.",
+    "ctaPrimary": "Démarrer un brief technique",
+    "ctaGhost": "Voir nos projets",
+    "footerNote": "Zéro perte au passage de relais : les composants UI sont construits sur de vrais contrats API, définis avant d'écrire la moindre ligne de code.",
+    "members": {
+      "lahcen": {
+        "name": "Lahcen Alhiane",
+        "title": "Lead Frontend — React & TypeScript",
+        "bio": "Lahcen conçoit des interfaces React robustes et fidèles au pixel près. Il se concentre sur une architecture de composants évolutive, des styles prévisibles avec CSS Modules, et une accessibilité intégrée dès le départ.",
+        "resp1": "Architecture des composants et design system",
+        "resp2": "Optimisation des bundles et Core Web Vitals",
+        "resp3": "Conformité accessibilité et fidélité UX"
+      },
+      "mohamed": {
+        "name": "Mohamed Bouderya",
+        "title": "Lead Backend — Node.js & MongoDB",
+        "bio": "Mohamed conçoit des APIs Node.js scalables et des schémas de données efficaces. Il se concentre sur des endpoints à faible latence, des pipelines d'agrégation pragmatiques et des systèmes observables sous charge.",
+        "resp1": "Conception d'API et modélisation des données",
+        "resp2": "Performance des requêtes, cache et indexation",
+        "resp3": "Journalisation, métriques et disponibilité opérationnelle"
+      }
+    }
+  },
+  "projects": {
+    "pageTitle": "Projets — OnePiece Coding | Études de cas React & Node.js",
+    "metaDescription": "Projets full-stack par OnePiece Coding : frontends React de production, APIs Node.js, testés et optimisés pour des performances réelles. Architecture et choix techniques.",
+    "h1": "Des projets livrés de bout en bout — frontend et backend, ensemble.",
+    "lead": "Chaque projet ci-dessous est planifié, construit et livré par nous deux. Les décisions côté frontend tiennent compte de la forme des APIs. Les contrats backend sont écrits pour minimiser la charge cliente. Aucune perte au passage de relais.",
+    "keyFeaturesLabel": "Fonctionnalités clés",
+    "githubLinkText": "Voir sur GitHub",
+    "demoLinkText": "Voir la démo en direct",
+    "techAriaLabel": "Technologies utilisées",
+    "ctaPrimary": "Demander un audit de performance",
+    "ctaGhost": "Démarrer un brief projet",
+    "footerNote": "Des bibliothèques qui font ce qu'une API native ferait aussi bien ? Nous auditons les applications et livrons un plan de remédiation priorisé — pas de blabla, juste des estimations d'impact.",
+    "items": {
+      "op-blog": {
+        "title": "OP Blog — CMS Full-Stack Prêt pour la Production",
+        "summary": "Une plateforme de blog full-stack conçue pour de vraies opérations de contenu : articles publics, gestion des profils utilisateurs et une suite d'administration pour la modération et l'analytique. Construite avec une philosophie zéro-bloat délibérée — chaque dépendance remise en question, chaque API native préférée.",
+        "groups": [
+          {
+            "groupTitle": "Gestion des utilisateurs et profils",
+            "features": [
+              {
+                "name": "Profils dynamiques",
+                "description": "Les utilisateurs mettent à jour leurs bios et téléchargent des photos via Cloudinary. L'état des profils est géré par des async thunks Redux Toolkit avec des états de chargement et d'erreur propres."
+              },
+              {
+                "name": "Toasts sans dépendances",
+                "description": "Système de notifications personnalisé basé sur des animations CSS keyframes et crypto.randomUUID() — sans bibliothèque de toasts, sans poids superflu."
+              },
+              {
+                "name": "Gestion d'état asynchrone",
+                "description": "Redux Toolkit gère tous les flux de données asynchrones — récupération, mise en cache et mises à jour optimistes — sans aucune bibliothèque externe de data-fetching."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Suite d'administration",
+            "features": [
+              {
+                "name": "Modération des utilisateurs",
+                "description": "Opérations CRUD complètes pour la base d'utilisateurs, protégées par un contrôle d'accès basé sur les rôles."
+              },
+              {
+                "name": "Gouvernance du contenu",
+                "description": "Gestion des articles et des catégories conçue pour passer à l'échelle — avec pagination, filtres et actions en masse."
+              },
+              {
+                "name": "Tableau de bord en direct",
+                "description": "Métriques de la plateforme mises à jour en temps réel sur les actions d'administration — sans polling, sans re-rendus inutiles."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Décisions de performance",
+            "features": [
+              {
+                "name": "Remplacement de Framer Motion",
+                "description": "Framer Motion remplacé par des animations CSS optimisées. Résultat : un bundle mesurément plus léger sans surcharge JavaScript à l'exécution."
+              },
+              {
+                "name": "Remplacement de nanoid",
+                "description": "Dépendance nanoid supprimée au profit du natif crypto.randomUUID() — un package de moins, fonctionnalité identique."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Ce qui distingue OP Blog",
+            "features": [
+              {
+                "name": "Approche native d'abord",
+                "description": "Nous n'installons pas une bibliothèque pour chaque petite fonctionnalité. Framer Motion → keyframes CSS. nanoid → crypto.randomUUID(). Le résultat : une base de code rapide et maintenable qui ne ralentit pas le navigateur."
+              },
+              {
+                "name": "État complexe, UI propre",
+                "description": "Les async thunks Redux Toolkit gèrent des flux complexes — mises à jour de profils en temps réel, modération de contenu multi-niveaux — pendant que l'UI reste à 60fps avec des états de chargement et d'erreur clairs."
+              },
+              {
+                "name": "Coordination full-stack",
+                "description": "Mohamed a construit un backend Node.js et MongoDB sécurisé et bien structuré. Lahcen a livré un frontend React responsive et TypeScript-first. Les deux côtés façonnés par le même brief produit."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "services": {
+    "pageTitle": "Services — OnePiece Coding | MVP, Scalabilité & Audits",
+    "metaDescription": "Livraison de MVP en quelques semaines, scalabilité full-stack sous charge, et audits de performance priorisés. OnePiece Coding : ingénierie orientée résultats mesurables.",
+    "h1": "Ce que nous construisons, faisons évoluer et corrigeons — et comment.",
+    "lead": "Trois services ciblés autour de résultats d'ingénierie concrets : livrer un MVP prêt pour la production rapidement, rendre un produit existant résilient sous charge, ou obtenir une feuille de route de remédiation priorisée pour votre frontend et backend.",
+    "serviceListAriaLabel": "Offres de services",
+    "bulletsAriaLabel": "Ce qui est inclus",
+    "howItWorks": {
+      "h2": "Comment se déroule une collaboration",
+      "step1Strong": "Cadrage (1–2 heures)",
+      "step1Text": "— un brief technique pour définir les objectifs, contraintes et critères de succès mesurables.",
+      "step2Strong": "Audit & plan",
+      "step2Text": "— liste de corrections P0 → P3 priorisées avec estimations d'effort et d'impact.",
+      "step3Strong": "Exécution",
+      "step3Text": "— sprint d'implémentation, ou un handoff propre avec tests et benchmarks inclus.",
+      "cta": "Démarrer un brief technique"
+    },
+    "footerNote": "Prix et délais sont définis par engagement. Pour un MVP, nous fournissons une estimation à périmètre fixe après l'appel de cadrage — pas de réengagement ouvert sauf si vous le souhaitez.",
+    "items": {
+      "mvp": {
+        "title": "Livraison MVP",
+        "subtitle": "Livrer un produit prêt pour la production avec un périmètre maîtrisé et des résultats mesurables.",
+        "bullets": [
+          "Stack opinioné : frontend React + TypeScript, backend Node.js + Express, MongoDB ou MySQL.",
+          "Contrats API définis avant l'implémentation — pas d'over-fetch, pas de changements de schéma de dernière minute.",
+          "Première mise en production en semaines, pas en mois — feuille de route itérative avec jalons verrouillés.",
+          "Checklist de production incluse : journalisation, monitoring, error boundaries et pipelines de déploiement."
+        ],
+        "cta": "Réserver un appel de cadrage"
+      },
+      "scaling": {
+        "title": "Scalabilité Full-Stack",
+        "subtitle": "Rendre votre produit capable de gérer un vrai trafic — sans le réécrire.",
+        "bullets": [
+          "Profilage API et analyse des goulots d'étranglement : requêtes lentes, patterns N+1 et index manquants.",
+          "Workers basés sur des files d'attente, scalabilité horizontale Node.js et conseils de configuration autoscaling.",
+          "Plan d'observabilité : logs structurés, métriques légères et alertes actionnables.",
+          "Recommandations d'infrastructure dimensionnées pour des coûts prévisibles à mesure que le trafic croît."
+        ],
+        "cta": "Discuter d'un plan de scalabilité"
+      },
+      "audit": {
+        "title": "Audit de Performance & Plan de Correction",
+        "subtitle": "Une feuille de route de remédiation priorisée avec estimations d'effort et objectifs mesurables.",
+        "bullets": [
+          "Frontend : analyse du bundle, chemin de rendu critique, code-splitting et optimisation des assets.",
+          "Backend : plans de requêtes, lacunes d'index, stratégie de cache et revue des payloads de réponse.",
+          "Liste de corrections P0 → P3 — chaque élément avec effort estimé et impact attendu.",
+          "Sprint d'implémentation optionnel pour appliquer immédiatement les corrections prioritaires."
+        ],
+        "cta": "Demander un audit"
+      }
+    }
+  },
+  "testimonials": {
+    "pageTitle": "Témoignages — Vrais Clients & Résultats | OnePiece Coding",
+    "metaDescription": "Retours de clients ayant travaillé avec OnePiece Coding : une auto-école, une entreprise de distribution et un projet de fin d'études. Des résultats concrets, des avis sincères.",
+    "h1": "Ce que disent nos clients — de vrais projets, de vrais retours.",
+    "lead": "Des systèmes de réservation à la gestion de stock et aux projets de fin d'études, nous travaillons avec des clients à toutes les échelles. Voici ce qu'ils ont dit après avoir collaboré avec nous.",
+    "ctaPrimary": "Démarrer un brief technique",
+    "ctaGhost": "Voir nos projets",
+    "footerNote": "Ce sont de vrais témoignages de clients réels. Des références sont disponibles sur demande.",
+    "carouselAriaLabel": "Témoignages clients",
+    "tablistAriaLabel": "Navigation des témoignages",
+    "prevAriaLabel": "Témoignage précédent",
+    "nextAriaLabel": "Témoignage suivant",
+    "clients": {
+      "ahmed": {
+        "quote": "Le système de réservation qu'ils ont développé a complètement remplacé notre agenda papier. Nos élèves réservent maintenant leurs leçons de conduite en ligne à n'importe quelle heure, et nous voyons le planning de la semaine en un coup d'œil. Cela nous fait gagner du temps chaque jour.",
+        "role": "Moniteur de conduite",
+        "company": "Auto-école Alhayat-DR",
+        "dotAriaLabel": "Aller au témoignage de Ahmed Iben Daoud"
+      },
+      "mustapha": {
+        "quote": "Avant cette application, suivre les stocks dans notre distribution épicerie était un vrai casse-tête. Maintenant tout est centralisé — entrées, sorties, fournisseurs et rapports. L'équipe a compris notre métier avant d'écrire la moindre ligne de code.",
+        "role": "PDG",
+        "company": "Kewoped Distribution",
+        "dotAriaLabel": "Aller au témoignage de Mustapha Bougermez"
+      },
+      "asma": {
+        "quote": "Mon projet de fin d'études devait gérer les candidatures de A à Z — dépôt de CV, examen par les entreprises et validation par l'administrateur. Ils ont construit exactement ce que j'avais spécifié, le code était suffisamment propre pour être présenté au jury, et j'ai soutenu avec succès.",
+        "role": "Étudiante en informatique — OFPPT",
+        "company": "Projet de Fin d'Études (PFE)",
+        "dotAriaLabel": "Aller au témoignage de Asma Ben Baali"
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Contact — Recruter OnePiece Coding | Frontend & Backend",
+    "metaDescription": "Disponibles pour des projets freelance, des missions contractuelles et des audits. Contactez OnePiece Coding via WhatsApp, LinkedIn ou e-mail. Ingénieurs React & Node.js, full remote.",
+    "h1": "Travaillons ensemble.",
+    "lead": "Nous sommes disponibles pour des projets freelance, des missions contractuelles et des audits de performance. Frontends React, backends Node.js, ou les deux — full remote et réactifs sous 48 heures.",
+    "contactMethodsH2": "Comment nous contacter",
+    "hiringH2": "Ouvert aux missions",
+    "ctaPrimary": "Rencontrer l'équipe",
+    "ctaGhost": "Voir nos projets",
+    "footerNote": "Envoyez un message décrivant votre projet ou votre offre et nous répondrons avec les prochaines étapes — généralement sous 48 heures.",
+    "methods": {
+      "whatsapp-lahcen": {
+        "title": "WhatsApp / Lahcen",
+        "ariaLabel": "Nous contacter (Lahcen Alhiane | Lead Frontend) sur WhatsApp (s'ouvre dans un nouvel onglet)"
+      },
+      "whatsapp-mohamed": {
+        "title": "WhatsApp / Mohamed",
+        "ariaLabel": "Nous contacter (Mohamed Bouderya | Lead Backend) sur WhatsApp (s'ouvre dans un nouvel onglet)"
+      },
+      "linkedin-lahcen": {
+        "title": "LinkedIn / Lahcen",
+        "ariaLabel": "Lahcen Alhiane sur LinkedIn (s'ouvre dans un nouvel onglet)"
+      },
+      "linkedin-mohamed": {
+        "title": "LinkedIn / Mohamed",
+        "ariaLabel": "Mohamed Bouderya sur LinkedIn (s'ouvre dans un nouvel onglet)"
+      },
+      "email": {
+        "title": "E-mail",
+        "ariaLabel": "Envoyer un e-mail à onepiece.codingpar@gmail.com"
+      },
+      "availability": {
+        "title": "Disponibilité",
+        "meta": "Disponible pour du freelance et des missions contractuelles — réponse sous 48 heures"
+      }
+    },
+    "hire": {
+      "lahcen": {
+        "name": "Lahcen Alhiane — Lead Frontend",
+        "role": "Ingénieur Frontend",
+        "description": "React & TypeScript — architecture de composants, optimisation des performances, accessibilité, CSS Modules, Vite.",
+        "availability": "Disponible pour des missions frontend à temps partiel, plein temps ou full remote"
+      },
+      "mohamed": {
+        "name": "Mohamed Bouderya — Lead Backend",
+        "role": "Ingénieur Backend",
+        "description": "Node.js & TypeScript — conception d'API, modélisation des données, pipelines d'agrégation, tests, observabilité et scalabilité.",
+        "availability": "Disponible pour des missions backend à temps partiel, plein temps ou full remote"
+      }
+    }
+  }
+}

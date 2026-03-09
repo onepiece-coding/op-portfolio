@@ -3,81 +3,80 @@
  */
 
 import {
-  EmailIcon,
   ExclamationCircleIcon,
   LinkedInFillIcon,
   WhatsappIcon,
+  EmailIcon,
 } from "@/components/icons";
+
+export type ContactMethodId =
+  | "whatsapp-lahcen"
+  | "whatsapp-mohamed"
+  | "linkedin-lahcen"
+  | "linkedin-mohamed"
+  | "email"
+  | "availability";
+
+export type HireId = "lahcen" | "mohamed";
 
 export interface IContactMethod {
   readonly Icon: React.ComponentType;
+  readonly id: ContactMethodId;
   readonly external?: boolean;
-  readonly ariaLabel?: string;
   readonly href?: string;
-  readonly title: string;
-  readonly meta: string;
-  readonly id: string;
+  // meta stays in data only for non-translatable values (phone, email address, URL slug)
+  readonly meta?: string;
 }
 
 export interface TeamMemberContact {
-  readonly availability: string;
-  readonly description: string;
-  readonly name: string;
-  readonly role: string;
-  readonly id: string;
+  readonly id: HireId;
 }
 
 export const CONTACT_METHODS: readonly IContactMethod[] = [
   {
     href: "https://wa.me/212696514234?text=Hello%20OnePiece%20Coding",
-    ariaLabel: "WhatsApp / Phone (opens in new tab)",
-    meta: "+212 6 96 51 42 34",
-    title: "Phone / WhatsApp",
     Icon: WhatsappIcon,
-    id: "whatsapp",
+    id: "whatsapp-lahcen",
+    external: true,
+  },
+  {
+    href: "https://wa.me/212618620089?text=Hello%20OnePiece%20Coding",
+    Icon: WhatsappIcon,
+    id: "whatsapp-mohamed",
     external: true,
   },
   {
     href: "https://www.linkedin.com/in/lahcen-alhiane-61217239a/",
-    ariaLabel: "LinkedIn profile (opens in new tab)",
-    meta: "/in/lahcen-alhiane-61217239a/",
     Icon: LinkedInFillIcon,
-    title: "LinkedIn",
-    id: "linkedin",
+    id: "linkedin-lahcen",
     external: true,
   },
   {
-    ariaLabel: "Send email to onepiece.codingpar@gmail.com",
+    href: "https://www.linkedin.com/in/mohamed-bouderya-0270142a2/",
+    Icon: LinkedInFillIcon,
+    id: "linkedin-mohamed",
+    external: true,
+  },
+  {
     href: "mailto:onepiece.codingpar@gmail.com",
-    meta: "onepiece.codingpar@gmail.com",
-    external: false,
     Icon: EmailIcon,
-    title: "Email",
+    external: false,
     id: "email",
   },
-  {
-    meta: "Open for freelance & contract roles — respond within 48 hours",
-    Icon: ExclamationCircleIcon,
-    title: "Availability",
-    id: "availability",
-  },
-];
+  { id: "availability", Icon: ExclamationCircleIcon },
+] as const satisfies readonly IContactMethod[];
+
+// Non-translatable meta values (phone number, email address — never change per language)
+export const CONTACT_META: Record<ContactMethodId, string | undefined> = {
+  "linkedin-lahcen": "/in/lahcen-alhiane-61217239a/",
+  "linkedin-mohamed": "/in/mohamed-bouderya-0270142a2/",
+  email: "onepiece.codingpar@gmail.com",
+  "whatsapp-lahcen": "+212 6 96 51 42 34",
+  "whatsapp-mohamed": "+212 6 18 62 00 89",
+  availability: undefined, // translated in JSON
+};
 
 export const HIRE_CARDS: readonly TeamMemberContact[] = [
-  {
-    description:
-      "React Engineer | performance-first UI, component architecture, accessibility",
-    availability: "Available for: Part / Full / Remote frontend roles",
-    name: "Lahcen Alhiane — Frontend Lead",
-    role: "Frontend Roles",
-    id: "lahcen",
-  },
-  {
-    description:
-      "Node.js Developer | API design, aggregation pipelines, observability, scaling",
-    availability: "Available for: Part / Full / Remote backend roles",
-    name: "Mohamed Bouderya — Backend Lead",
-    role: "Backend Roles",
-    id: "mohamed",
-  },
-];
+  { id: "lahcen" },
+  { id: "mohamed" },
+] as const satisfies readonly TeamMemberContact[];

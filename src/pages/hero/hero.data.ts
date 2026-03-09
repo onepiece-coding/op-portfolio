@@ -1,6 +1,9 @@
+/**
+ * @file src/pages/hero/hero.data.ts
+ */
+
 import {
   EmailIcon,
-  ExpressIcon,
   GitHubIcon,
   JavaScriptIcon,
   LinkedInOutlineIcon,
@@ -9,6 +12,7 @@ import {
   ReactIcon,
   ReactRouterIcon,
   ReduxToolkitIcon,
+  SQLIcon,
   TypeScriptIcon,
 } from "@/components/icons";
 
@@ -74,9 +78,9 @@ export const SKILLS: ISkill[] = [
     Icon: MongoDBIcon,
   },
   {
-    key: "express",
-    label: "Express.js",
-    Icon: ExpressIcon,
+    key: "sql",
+    label: "SQL",
+    Icon: SQLIcon,
   },
   {
     key: "js",

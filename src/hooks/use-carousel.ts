@@ -1,3 +1,7 @@
+/**
+ * @file src/hooks/use-carousel.ts
+ */
+
 import { useCallback, useEffect, useState } from "react";
 
 interface UseCarouselOptions {

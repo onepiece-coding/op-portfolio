@@ -1,3 +1,7 @@
+/**
+ * @file src/pages/contact/contact-method/contact-method.module.css
+ */
+
 .method {
   background: linear-gradient(180deg, var(--color-white), #fbfdff);
   box-shadow: 0 8px 24px rgba(11, 17, 32, 0.04);
