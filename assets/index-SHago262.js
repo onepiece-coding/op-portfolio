@@ -1,0 +1,1 @@
+import{c,j as l}from"./index-BLC8hTvX.js";const r="_badge_jawqz_5",d={badge:r},m=n=>{const s=c.c(3),{label:t,as:o}=n,a=o===void 0?"span":o;let e;return s[0]!==a||s[1]!==t?(e=l.jsx(a,{className:d.badge,children:t}),s[0]=a,s[1]=t,s[2]=e):e=s[2],e};export{m as B};

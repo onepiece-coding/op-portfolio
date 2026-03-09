@@ -1,1 +1,0 @@
-import{c as n,j as l}from"./index-C3mpLrdU.js";const r="_badge_1jcci_1",i={badge:r},m=o=>{const s=n.c(3),{label:t,as:c}=o,a=c===void 0?"span":c;let e;return s[0]!==a||s[1]!==t?(e=l.jsx(a,{className:i.badge,children:t}),s[0]=a,s[1]=t,s[2]=e):e=s[2],e};export{m as B};
