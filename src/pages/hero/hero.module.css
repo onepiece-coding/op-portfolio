@@ -68,11 +68,6 @@
   width: 46px;
 }
 
-.socialBtn:hover {
-  box-shadow: 0 12px 26px rgba(11, 17, 32, 0.12);
-  transform: translateY(-6px) scale(1.04);
-}
-
 .socialIcon svg {
   display: block;
 }
@@ -210,10 +205,6 @@
   top: calc(50% - 78px);
 }
 
-.hero:hover .orbit {
-  animation-duration: 10s;
-}
-
 /* Responsive Design */
 
 @media (max-width: 900px) {
@@ -275,4 +266,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media (hover: hover) {
+  .socialBtn:hover {
+    box-shadow: 0 12px 26px rgba(11, 17, 32, 0.12);
+    transform: translateY(-6px) scale(1.04);
+  }
+
+  /* .hero:hover .orbit {
+    animation-duration: 10s;
+  } */
 }
