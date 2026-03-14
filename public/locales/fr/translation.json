@@ -297,5 +297,26 @@
         "availability": "Disponible pour des missions backend à temps partiel, plein temps ou full remote"
       }
     }
+  },
+  "error-boundary": {
+    "pageTitle": "Erreur de page — OnePiece Coding",
+    "metaDescription": "Impossible de charger cette page. Veuillez actualiser la page ou retourner à la page d'accueil. Si le problème persiste, veuillez signaler l'erreur à onepiece.codingpar@gmail.com en indiquant l'URL de la page.",
+    "h1": "Quelque chose s'est mal passé.",
+    "lead": "Notre équipe de développement front-end a rencontré des difficultés.",
+    "button": "Essayer à nouveau"
+  },
+  "error-element": {
+    "errorMsg": "Une erreur inattendue s'est produite.",
+    "pageTitle": "Erreur de page — OnePiece Coding",
+    "metaDescription": "Impossible de charger cette page. Veuillez actualiser la page ou retourner à la page d'accueil. Si le problème persiste, veuillez signaler l'erreur à onepiece.codingpar@gmail.com en indiquant l'URL de la page.",
+    "h1": "Quelque chose s'est mal passé",
+    "lead": "Impossible de charger cette page. Lien brisé, problème de serveur ou dysfonctionnement temporaire. Veuillez actualiser la page ou utiliser les liens ci-dessous pour poursuivre votre navigation.",
+    "primaryBtn": "Retourner",
+    "ghostBtn": "Rentre chez toi",
+    "linkText": "Signaler un problème",
+    "summary": "Détails techniques",
+    "sideTitle": "Besoin d'une aide immédiate?",
+    "sideText": "Contactez-nous et nous vous aiderons rapidement — veuillez indiquer les détails de l'erreur ci-dessus lorsque vous nous contacterez.",
+    "sideLink": "Voir les projets"
   }
 }

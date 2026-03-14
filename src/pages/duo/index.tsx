@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { TEAM_MEMBERS } from "./duo.data";
 import { Button } from "@/components/ui";
 
-import styles from "./duo.module.css";
+import styles from "./styles.module.css";
 import TeamCard from "./team-card";
 
 const DuoPage = () => {

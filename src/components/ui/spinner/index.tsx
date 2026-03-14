@@ -2,7 +2,7 @@
  * @file src/components/ui/spinner/index.tsx
  */
 
-import styles from "./spinner.module.css";
+import styles from "./styles.module.css";
 
 interface SpinnerProps {
   size?: "sm" | "md" | "lg";

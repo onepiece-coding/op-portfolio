@@ -5,7 +5,7 @@
 import { Spinner } from "@/components/ui";
 import { Suspense } from "react";
 
-import styles from "./with-suspense.module.css";
+import styles from "./styles.module.css";
 
 interface WithSuspenseProps {
   children: React.ReactNode;

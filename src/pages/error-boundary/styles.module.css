@@ -1,0 +1,31 @@
+/**
+ * @file src/pages/error-boundary/styles.module.css
+ */
+
+.container {
+  background: var(--color-deep-navy);
+  color: var(--color-white);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  padding: 32px;
+  gap: 16px;
+}
+
+.container h1,
+.container p {
+  margin: 0;
+}
+
+.container button {
+  background: var(--color-electric-purple);
+  margin-top: var(--space-2);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  border: none;
+}

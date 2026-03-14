@@ -6,7 +6,7 @@ import type { Service } from "../services.data";
 import { Button, Card } from "@/components/ui";
 import { useTranslation } from "react-i18next";
 
-import styles from "./service-card.module.css";
+import styles from "./styles.module.css";
 
 const ServiceCard = ({ service }: { service: Service }) => {
   const { t } = useTranslation();

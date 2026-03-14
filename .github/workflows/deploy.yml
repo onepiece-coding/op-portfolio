@@ -1,3 +1,5 @@
+# .github/workflows/deploy.yml
+
 name: Deploy OnePiece Coding Portfolio To Github Pages
 
 # This ci/cd pipeline triggered on push code to repository (main branche)
@@ -27,6 +29,12 @@ jobs:
       # Install Dependencies
       - name: Install Dependencies
         run: npm install
+
+      # ── Gate: all tests must pass before the build runs ──────────────────
+      # If any test fails, GitHub Actions marks this step as failed and
+      # cancels every subsequent step — build and deploy never execute.
+      - name: Run Tests
+        run: npm run test -- --run
 
       # Build The Project
       - name: Build The Project

@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 import { NAV_ITEMS } from "../navbar.data";
 import { createPortal } from "react-dom";
 
-import styles from "./mobile-menu.module.css";
+import styles from "./styles.module.css";
 import NavBrand from "../brand";
 
 interface MobileMenuProps {

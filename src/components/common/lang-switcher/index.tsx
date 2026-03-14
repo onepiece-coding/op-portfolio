@@ -1,10 +1,10 @@
 /**
- * @file src/components/common/navbar/lang-switcher/index.tsx
+ * @file src/components/common/lang-switcher/index.tsx
  */
 
 import { useTranslation } from "react-i18next";
 
-import styles from "./lang-switcher.module.css";
+import styles from "./styles.module.css";
 
 const LANGUAGES = [
   { code: "en", label: "EN" },

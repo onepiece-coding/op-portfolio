@@ -2,7 +2,7 @@
  * @file src/pages/testimonials/star-row/index.tsx
  */
 
-import styles from "./star-row.module.css";
+import styles from "./styles.module.css";
 
 function StarRow({ value = 5 }: { value?: number }) {
   const stars = Array.from({ length: 5 }, (_, i) => i + 1);

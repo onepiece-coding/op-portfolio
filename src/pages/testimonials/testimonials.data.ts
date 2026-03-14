@@ -2,8 +2,6 @@
  * @file src/pages/testimonials/testimonials.data.ts
  */
 
-// src/pages/testimonials/testimonials.data.ts
-
 export interface Testimonial {
   readonly translationKey: "ahmed" | "mustapha" | "asma";
   readonly rating: number;

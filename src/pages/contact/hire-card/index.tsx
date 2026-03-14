@@ -5,7 +5,7 @@
 import { useTranslation } from "react-i18next";
 import type { HireId } from "../contact.data";
 
-import styles from "./hire-card.module.css";
+import styles from "./styles.module.css";
 
 const HireCard = ({ id }: { id: HireId }) => {
   const { t } = useTranslation();

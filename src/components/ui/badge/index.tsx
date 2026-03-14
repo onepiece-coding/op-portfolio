@@ -2,7 +2,7 @@
  * @file src/components/ui/badge/index.tsx
  */
 
-import styles from "./badge.module.css";
+import styles from "./styles.module.css";
 
 type BadgeElement = "span" | "li";
 

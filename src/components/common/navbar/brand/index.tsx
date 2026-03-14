@@ -4,7 +4,7 @@
 
 import { useTranslation } from "react-i18next";
 
-import styles from "./brand.module.css";
+import styles from "./styles.module.css";
 
 const NavBrand = () => {
   const { t } = useTranslation();

@@ -4,7 +4,7 @@
 
 import { Link } from "react-router-dom";
 
-import styles from "./button.module.css";
+import styles from "./styles.module.css";
 
 type ButtonVariant = "primary" | "ghost";
 

@@ -5,7 +5,7 @@
 import { CONTACT_META, type IContactMethod } from "../contact.data";
 import { useTranslation } from "react-i18next";
 
-import styles from "./contact-method.module.css";
+import styles from "./styles.module.css";
 
 const ContactMethod = ({ href, external, Icon, id }: IContactMethod) => {
   const { t } = useTranslation();

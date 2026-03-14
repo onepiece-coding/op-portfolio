@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui";
 
 import ContactMethod from "./contact-method";
-import styles from "./contact.module.css";
+import styles from "./styles.module.css";
 import HireCard from "./hire-card";
 
 const ContactPage = () => {

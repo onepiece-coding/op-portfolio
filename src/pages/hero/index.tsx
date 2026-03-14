@@ -5,7 +5,7 @@
 import { useTranslation } from "react-i18next";
 import { SKILLS, SOCIAL } from "./hero.data";
 
-import styles from "./hero.module.css";
+import styles from "./styles.module.css";
 
 const SOCIAL_ARIA_KEYS: Record<string, string> = {
   LinkedIn: "hero.socialLinkedIn",

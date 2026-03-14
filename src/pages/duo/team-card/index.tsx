@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { getInitials } from "@/lib/dom-utils";
 import { Badge, Card } from "@/components/ui";
 
-import styles from "./team-card.module.css";
+import styles from "./styles.module.css";
 
 type TeamCardProps = {
   translationKey: "lahcen" | "mohamed";

@@ -1,0 +1,11 @@
+/**
+ * @file src/components/ui/badge/styles.module.css
+ */
+
+.badge {
+  background: rgba(11, 17, 32, 0.04);
+  color: var(--color-gray-700);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+}

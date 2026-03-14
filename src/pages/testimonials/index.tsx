@@ -9,7 +9,7 @@ import { Button } from "@/components/ui";
 import { useCarousel } from "@/hooks";
 import { useRef } from "react";
 
-import styles from "./testimonials.module.css";
+import styles from "./styles.module.css";
 import StarRow from "./star-row";
 
 const TestimonialsPage = () => {

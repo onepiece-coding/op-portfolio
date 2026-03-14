@@ -2,7 +2,7 @@
  * @file src/components/ui/card/index.tsx
  */
 
-import styles from "./card.module.css";
+import styles from "./styles.module.css";
 import clsx from "clsx";
 
 type CardElement = "article" | "li";

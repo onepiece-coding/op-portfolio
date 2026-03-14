@@ -1,9 +1,0 @@
-/**
- * @file src/pages/testimonials/star-row/star-row.module.css
- */
-
-.stars {
-  color: var(--color-electric-purple);
-  display: flex;
-  gap: 4px;
-}

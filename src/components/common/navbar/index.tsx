@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { NAV_ITEMS } from "./navbar.data";
 import { useRef, useState } from "react";
 
-import styles from "./navbar.module.css";
+import styles from "./styles.module.css";
 import MobileMenu from "./mobile-menu";
 import NavBrand from "./brand";
 

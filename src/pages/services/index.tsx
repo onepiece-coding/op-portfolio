@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { SERVICES } from "./services.data";
 import { Button } from "@/components/ui";
 
-import styles from "./services.module.css";
+import styles from "./styles.module.css";
 import ServiceCard from "./service-card";
 
 const ServicesPage = () => {

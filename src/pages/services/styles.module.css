@@ -1,0 +1,128 @@
+/**
+ * @file src/pages/services/styles.module.css
+ */
+
+.page {
+  padding: var(--space-6) var(--space-4);
+  align-items: center;
+  min-height: 100%;
+  display: flex;
+}
+
+.containerInner {
+  max-width: var(--app-max-width);
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto var(--space-6);
+  text-align: center;
+  max-width: 90ch;
+}
+
+.heading {
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-3) 0;
+  font-size: var(--type-lg);
+}
+
+.lead {
+  color: var(--color-gray-700);
+  font-size: var(--type-md);
+  margin: 0;
+}
+
+.grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: var(--space-5);
+  gap: var(--space-5);
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+}
+
+[dir="ltr"] .grid {
+  padding-left: 0;
+}
+
+[dir="rtl"] .grid {
+  padding-right: 0;
+}
+
+.grid > :last-child {
+  justify-self: center;
+  grid-column: span 2;
+  width: 50%;
+}
+
+.howItWorks {
+  background: linear-gradient(180deg, var(--color-white), #fbfdff);
+  box-shadow: 0 10px 28px rgba(11, 17, 32, 0.04);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+}
+
+.smallHeading {
+  font-size: calc(var(--type-md) + 2px);
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-gray-900);
+  text-align: center;
+}
+
+.steps {
+  color: var(--color-gray-700);
+  flex-direction: column;
+  gap: var(--space-3);
+  display: flex;
+}
+
+[dir="ltr"] .steps {
+  padding-left: 1.1em;
+}
+
+[dir="rtl"] .steps {
+  padding-right: 1.1em;
+}
+
+.howCta {
+  margin-top: var(--space-5);
+  justify-content: center;
+  display: flex;
+}
+
+.footer {
+  border-top: 1px solid rgba(11, 17, 32, 0.04);
+  padding-top: var(--space-4);
+  margin-top: var(--space-5);
+  text-align: center;
+}
+
+.footerNote {
+  color: var(--color-gray-500);
+  margin: 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .containerInner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid > :last-child {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  .howItWorks {
+    margin-top: var(--space-4);
+  }
+}

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PROJECTS } from "./projects.data";
 import { Button } from "@/components/ui";
 
-import styles from "./projects.module.css";
+import styles from "./styles.module.css";
 import ProjectCard from "./project-card";
 
 const ProjectsPage = () => {

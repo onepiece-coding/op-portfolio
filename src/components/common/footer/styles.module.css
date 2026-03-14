@@ -1,3 +1,7 @@
+/**
+ * @file src/components/common/footer/styles.module.css
+ */
+
 .footerContainer {
   padding: var(--space-4) 0;
   background: linear-gradient(

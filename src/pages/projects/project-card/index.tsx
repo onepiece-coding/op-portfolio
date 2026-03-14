@@ -6,7 +6,7 @@ import type { Project } from "../projects.data";
 import { useTranslation } from "react-i18next";
 import { Badge, Card } from "@/components/ui";
 
-import styles from "./project-card.module.css";
+import styles from "./styles.module.css";
 
 // Mirror the JSON shape — used only for typing returnObjects results
 interface ProjectFeature {
