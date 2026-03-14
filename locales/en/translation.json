@@ -297,5 +297,26 @@
         "availability": "Available for part-time, full-time, and remote backend roles"
       }
     }
+  },
+  "error-boundary": {
+    "pageTitle": "Page Error — OnePiece Coding",
+    "metaDescription": "We had trouble loading that page. Try refreshing or return home. If the issue persists, report the error to onepiece.codingpar@gmail.com with the page URL.",
+    "h1": "Something went wrong.",
+    "lead": "Our frontend crew hit turbulence.",
+    "button": "Try Again"
+  },
+  "error-element": {
+    "errorMsg": "An unexpected error occurred.",
+    "pageTitle": "Page Error — OnePiece Coding",
+    "metaDescription": "We had trouble loading that page. Try refreshing or return home. If the issue persists, report the error to onepiece.codingpar@gmail.com with the page URL.",
+    "h1": "Something went wrong.",
+    "lead": "We couldn't load that page. This might be a broken link, a server issue, or a temporary glitch. Try refreshing, or use the links below to continue browsing.",
+    "primaryBtn": "Go back",
+    "ghostBtn": "Go home",
+    "linkText": "Report issue",
+    "summary": "Technical details",
+    "sideTitle": "Need immediate help?",
+    "sideText": "Contact us and we’ll assist quickly — share the error details above when you reach out.",
+    "sideLink": "See projects"
   }
 }
