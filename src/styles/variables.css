@@ -4,9 +4,9 @@
 
 :root {
   /* colors */
-  --color-electric-purple: #7b3cff;
-  --color-indigo-600: #4b2b97;
-  --color-deep-navy: #0b1220;
+  --color-electric-purple: #2563eb /*#7b3cff*/;
+  --color-indigo-600: rgba(37, 100, 235, 0.8); /*#4b2b97;*/
+  --color-deep-navy: #0d1321;
   --color-gray-900: #0f1724;
   --color-gray-700: #374151;
   --color-gray-500: #6b7280;
