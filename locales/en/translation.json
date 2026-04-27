@@ -67,7 +67,7 @@
       },
       "mohamed": {
         "name": "Mohamed Bouderya",
-        "title": "Backend Lead — Node.js & MongoDB",
+        "title": "Backend Lead — Node.js & TypeScript",
         "bio": "Mohamed designs scalable Node.js APIs and efficient data schemas. He focuses on low-latency endpoints, pragmatic aggregation pipelines, and systems that stay observable under load.",
         "resp1": "API design and data modelling",
         "resp2": "Query performance, caching, and indexing",
