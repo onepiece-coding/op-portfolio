@@ -157,6 +157,84 @@
             ]
           }
         ]
+      },
+      "careerhub": {
+        "title": "CareerHub — Portail d'emploi Full-Stack Prêt pour la Production",
+        "summary": "Une plateforme de recrutement basée sur les rôles pour une utilisation réelle : les recruteurs publient et gèrent des offres, les candidats parcourent et postulent, et les admins gouvernent l'ensemble du système. Construite sans aucune bibliothèque UI — chaque composant, du DatePicker au TagsInput en passant par le système de notifications, a été conçu de zéro avec TypeScript de bout en bout et l'accessibilité intégrée dès le départ.",
+        "groups": [
+          {
+            "groupTitle": "Authentification & Sécurité des sessions",
+            "features": [
+              {
+                "name": "File d'attente de rafraîchissement des tokens",
+                "description": "Les réponses 401 concurrentes sont mises en file d'attente plutôt que de déclencher plusieurs déconnexions. Un seul rafraîchissement silencieux rejoue toutes les requêtes en attente en cas de succès, et déconnecte proprement en cas d'échec — aucune requête perdue, aucune double déconnexion."
+              },
+              {
+                "name": "Vérification e-mail & réinitialisation de mot de passe",
+                "description": "Flux e-mail tokenisés complets : vérification du compte à l'inscription, renvoi automatique lors d'une tentative de connexion non vérifiée, et réinitialisation en deux étapes via un lien sécurisé à expiration."
+              },
+              {
+                "name": "Validation de session au démarrage",
+                "description": "getMe s'exécute à chaque chargement de l'application contre l'API en direct. En cas de rejet, les données localStorage périmées sont effacées avant que l'utilisateur voie une interface authentifiée — aucun flash de contenu incorrect."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Tableaux de bord basés sur les rôles",
+            "features": [
+              {
+                "name": "Garde de route CanActivate",
+                "description": "Un garde de route partagé lit le rôle Redux et gère la fenêtre de rôle indéfini pendant le vol réseau getMe — aucune redirection prématurée, aucun flash blanc pendant la validation de session."
+              },
+              {
+                "name": "Panneau d'administration",
+                "description": "Gestion complète des utilisateurs avec recherche, cache paginé, attribution de rôle par ligne et suppression sélective en masse (tous les utilisateurs, recruteurs uniquement, ou utilisateurs réguliers uniquement). Cache invalidé automatiquement après chaque mutation."
+              },
+              {
+                "name": "Tableau de bord recruteur",
+                "description": "CRUD d'offres d'emploi avec un DatePicker personnalisé pour les échéances, un TagsInput pour les compétences et avantages, et acceptation/rejet par candidature avec mises à jour optimistes dans le slice et garde splice findIndex."
+              },
+              {
+                "name": "Tableau de bord candidat",
+                "description": "Navigation des offres avec recherche, tri, type et filtres de statut côté serveur — postuler en un seul dispatch, suivre le statut dans une vue paginée avec cache et transitions de page instantanées."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Moteur de formulaires & validation personnalisé",
+            "features": [
+              {
+                "name": "Hook useForm",
+                "description": "Un hook générique de formulaire développé de zéro avec les registrars register, registerSelect, registerTags, registerDate et registerFile. Inclut une revalidation en direct conditionnelle au touched, un valuesRef pour des handlers de blur stables sans closures périmées, isDirty et reset."
+              },
+              {
+                "name": "Bibliothèque de validation",
+                "description": "Plus de 12 types de règles déclaratives — required, minLength, maxLength, pattern, match, enum, optional, fileSize, fileType, minTags, maxTags, minDate, maxDate, custom — avec évaluation court-circuit et factory helpers composables. Sans Zod, sans Yup."
+              },
+              {
+                "name": "Contrôles UI sans dépendances",
+                "description": "Un DatePicker complet avec plage min/max et navigation clavier, un TagsInput avec commit Enter/virgule et suppression Backspace, et un Select avec rôle ARIA combobox — tout construit de zéro, sans bibliothèque de composants externe."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Architecture d'état & performance",
+            "features": [
+              {
+                "name": "Cache de pagination côté client",
+                "description": "Les réponses paginées sont stockées dans un dictionnaire Redux indexé par paramètres de requête. La navigation entre pages est instantanée. La fonction condition RTK ignore entièrement la requête réseau quand la clé est déjà en cache. Les mutations n'invalident que ce qui est périmé."
+              },
+              {
+                "name": "Réinitialisation du root reducer",
+                "description": "Un seul state = undefined sur l'action logoutUser/fulfilled réinitialise simultanément tous les slices — auth, jobs, applications, users, admin — ne laissant aucune donnée périmée pour la session suivante."
+              },
+              {
+                "name": "Listeners d'actions cross-slice",
+                "description": "Le slice auth écoute les actions de mise à jour de photo de profil et de profil utilisateur du slice users via extraReducers, gardant l'objet current-user synchronisé avec localStorage sans dupliquer l'état ni créer d'imports circulaires."
+              }
+            ]
+          }
+        ]
       }
     }
   },

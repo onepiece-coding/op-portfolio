@@ -13,14 +13,29 @@ export const PROJECTS: readonly Project[] = [
   {
     id: "op-blog",
     tech: [
-      "React",
+      "Redux Toolkit",
+      "Jest/Vitest",
+      "Express.js",
       "TypeScript",
       "Node.js",
-      "Express.js",
       "MongoDB",
-      "Jest/Vitest",
+      "React",
     ],
     githubRepoUrl: "https://github.com/onepiece-coding/OP-Blog",
     liveDemoUrl: "https://op-blog-mo4u.onrender.com/",
+  },
+  {
+    id: "careerhub",
+    tech: [
+      "Redux Toolkit",
+      "Jest/Vitest",
+      "Express.js",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "React",
+    ],
+    githubRepoUrl: "https://github.com/onepiece-coding/OP-CareerHub",
+    liveDemoUrl: "https://op-career-hub-frontend.vercel.app/",
   },
 ] as const satisfies readonly Project[];

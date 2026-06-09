@@ -157,6 +157,84 @@
             ]
           }
         ]
+      },
+      "careerhub": {
+        "title": "CareerHub — Production Full-Stack Job Portal",
+        "summary": "A role-based hiring platform built for real-world use: recruiters post and manage jobs, job seekers browse and apply, and admins govern the entire system. Built with zero UI libraries — every component, from the custom DatePicker calendar to the TagsInput and toast system, was engineered from scratch with TypeScript end-to-end and accessibility baked in throughout.",
+        "groups": [
+          {
+            "groupTitle": "Authentication & Session Security",
+            "features": [
+              {
+                "name": "Token Refresh Queue",
+                "description": "Concurrent 401 responses are queued rather than triggering multiple logouts. A single silent token refresh replays all pending requests on success and gracefully logs out on failure — no lost requests, no double-logout race condition."
+              },
+              {
+                "name": "Email Verification & Password Reset",
+                "description": "Full tokenised email flows: account verification on register, re-sent automatically on an unverified login attempt, and a two-step password reset via a secure expiring link."
+              },
+              {
+                "name": "Session Validation on Mount",
+                "description": "getMe fires on every app load against the live API. On rejection it clears stale localStorage data before the user sees any authenticated UI — no flash of wrong-role content."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Role-Based Dashboards",
+            "features": [
+              {
+                "name": "CanActivate Route Guard",
+                "description": "A shared route guard reads the Redux role and handles the undefined-role window during the getMe network flight — no premature redirect, no blank flash during session validation."
+              },
+              {
+                "name": "Admin Panel",
+                "description": "Full user management with search, paginated cache, per-row role assignment, and selective bulk deletion (all users, recruiters only, or regular users only). Cache is wiped automatically after every mutation."
+              },
+              {
+                "name": "Recruiter Dashboard",
+                "description": "Job CRUD with a custom DatePicker for deadlines, TagsInput for skills and facilities, and per-application accept/reject backed by optimistic in-slice updates with findIndex splice guard."
+              },
+              {
+                "name": "User Dashboard",
+                "description": "Job browsing with server-side search, sort, type, and status filters — apply with a single dispatch, track application status in a paginated cached view with instant page transitions."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Custom Form & Validation Engine",
+            "features": [
+              {
+                "name": "useForm Hook",
+                "description": "A hand-rolled generic form hook with register, registerSelect, registerTags, registerDate, and registerFile registrars. Includes touched-gated live revalidation, a valuesRef for stable blur handlers without stale closures, isDirty tracking, and reset."
+              },
+              {
+                "name": "Validation Library",
+                "description": "12+ declarative rule types — required, minLength, maxLength, pattern, match, enum, optional, fileSize, fileType, minTags, maxTags, minDate, maxDate, custom — with short-circuit evaluation and composable factory helpers. No Zod, no Yup."
+              },
+              {
+                "name": "Zero-Dependency UI Controls",
+                "description": "A full-featured DatePicker with min/max range and keyboard navigation, a TagsInput with Enter/comma commit and Backspace removal, and a Select with ARIA combobox role — all built from scratch, no external component library."
+              }
+            ]
+          },
+          {
+            "groupTitle": "State Architecture & Performance",
+            "features": [
+              {
+                "name": "Client-Side Pagination Cache",
+                "description": "Paginated responses are stored in a Redux dictionary keyed by query params. Page navigation is instant. The RTK condition function skips the network request entirely when the key is already cached. Mutations wipe only what is stale."
+              },
+              {
+                "name": "Root Reducer State Wipe",
+                "description": "A single state = undefined on the logoutUser/fulfilled action resets every slice simultaneously — auth, jobs, applications, users, admin — leaving zero stale data for the next session."
+              },
+              {
+                "name": "Cross-Slice Action Listeners",
+                "description": "The auth slice listens to profile photo and profile update actions from the users slice via extraReducers, keeping the current-user object in sync with localStorage without duplicating state or creating circular imports."
+              }
+            ]
+          }
+        ]
       }
     }
   },
