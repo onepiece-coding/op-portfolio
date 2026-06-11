@@ -22,7 +22,7 @@ export const PROJECTS: readonly Project[] = [
       "React",
     ],
     githubRepoUrl: "https://github.com/onepiece-coding/OP-Blog",
-    liveDemoUrl: "https://op-blog-mo4u.onrender.com/",
+    liveDemoUrl: "https://op-blog-frontend.vercel.app/",
   },
   {
     id: "careerhub",
