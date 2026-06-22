@@ -19,6 +19,14 @@ interface ProjectFeatureGroup {
   features: ProjectFeature[];
 }
 
+interface Credentials {
+  label: string;
+  data: {
+    email: "string";
+    password: string;
+  };
+}
+
 const ProjectCard = ({ project }: { project: Project }) => {
   const { t } = useTranslation();
 
@@ -27,6 +35,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const groups = t(`projects.items.${project.id}.groups`, {
     returnObjects: true, // use returnObjects: true to get the groups array
   }) as ProjectFeatureGroup[];
+  const credentials = t(`projects.items.${project.id}.credentials`, {
+    returnObjects: true, // use returnObjects: true to get the groups array
+  }) as Credentials[];
 
   return (
     <Card ariaLabelledby={`${project.id}-title`} hoverable as="li">
@@ -56,6 +67,30 @@ const ProjectCard = ({ project }: { project: Project }) => {
                   {description}
                 </li>
               ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <h3 className={styles.splitTitle}>
+        {t("projects.testCredentialsLabel")}
+      </h3>
+      <div className={styles.split}>
+        {credentials.map(({ label, data }) => (
+          <div key={label} className={styles.splitCol}>
+            <strong className={styles.splitHeading}>{label}</strong>
+            <ul>
+              <li>
+                <strong className={styles.featureKey}>
+                  {t("projects.email")}:{" "}
+                </strong>
+                {data.email}
+              </li>
+              <li>
+                <strong className={styles.featureKey}>
+                  {t("projects.password")}:{" "}
+                </strong>
+                {data.password}
+              </li>
             </ul>
           </div>
         ))}

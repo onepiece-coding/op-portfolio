@@ -81,6 +81,9 @@
     "h1": "Projects built end-to-end — frontend and backend, together.",
     "lead": "Each project below is planned, built, and shipped by both of us. Frontend component decisions are informed by API shape. Backend contracts are written for minimum client payload. No handoff waste.",
     "keyFeaturesLabel": "Key Features",
+    "testCredentialsLabel": "Test Credentials",
+    "email": "Email",
+    "password": "Password",
     "githubLinkText": "View on GitHub",
     "demoLinkText": "View live demo",
     "techAriaLabel": "Technologies used",
@@ -155,6 +158,22 @@
                 "description": "Mohamed built a secure, well-structured Node.js and MongoDB backend. Lahcen delivered a responsive, TypeScript-first React frontend. Both sides shaped by the same product brief."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Admin",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "User",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       },
@@ -233,6 +252,29 @@
                 "description": "The auth slice listens to profile photo and profile update actions from the users slice via extraReducers, keeping the current-user object in sync with localStorage without duplicating state or creating circular imports."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Admin",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "Recruiter",
+            "data": {
+              "email": "recruiter@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "User",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       }
