@@ -81,6 +81,9 @@
     "h1": "مشاريع مُسلَّمة من الألف إلى الياء — الواجهتان الأمامية والخلفية معاً.",
     "lead": "كل مشروع أدناه مُخطَّط ومبني ومُسلَّم من قِبَلنا معاً. قرارات المكوّنات الأمامية تنبثق من شكل الـ API. عقود الخادم مكتوبة لتقليل الحمل على العميل. لا هدر في التسليم.",
     "keyFeaturesLabel": "الميزات الرئيسية",
+    "testCredentialsLabel": "بيانات اعتماد الاختبار",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
     "githubLinkText": "عرض على GitHub",
     "demoLinkText": "عرض النسخة التجريبية",
     "techAriaLabel": "التقنيات المستخدمة",
@@ -155,6 +158,22 @@
                 "description": "بنى Mohamed خادم Node.js وMongoDB آمناً ومنظماً. قدّم Lahcen واجهة React متجاوبة ومبنية أولاً بـ TypeScript. كلا الجانبين صِيغا وفق الموجز الإنتاجي ذاته."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "المسؤل",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "المستخدم",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       },
@@ -233,6 +252,29 @@
                 "description": "يستمع slice المصادقة لإجراءات تحديث صورة الملف الشخصي ومعلومات المستخدم من slice المستخدمين عبر extraReducers، محافظاً على مزامنة كائن المستخدم الحالي مع localStorage دون تكرار الحالة أو إنشاء استيرادات دائرية."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "المسؤل",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "المجند",
+            "data": {
+              "email": "recruiter@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "المستخدم",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       }

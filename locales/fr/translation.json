@@ -81,6 +81,9 @@
     "h1": "Des projets livrés de bout en bout — frontend et backend, ensemble.",
     "lead": "Chaque projet ci-dessous est planifié, construit et livré par nous deux. Les décisions côté frontend tiennent compte de la forme des APIs. Les contrats backend sont écrits pour minimiser la charge cliente. Aucune perte au passage de relais.",
     "keyFeaturesLabel": "Fonctionnalités clés",
+    "testCredentialsLabel": "Identifiants de test",
+    "email": "E-mail",
+    "password": "Mot de passe",
     "githubLinkText": "Voir sur GitHub",
     "demoLinkText": "Voir la démo en direct",
     "techAriaLabel": "Technologies utilisées",
@@ -155,6 +158,22 @@
                 "description": "Mohamed a construit un backend Node.js et MongoDB sécurisé et bien structuré. Lahcen a livré un frontend React responsive et TypeScript-first. Les deux côtés façonnés par le même brief produit."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Administrateur",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "Utilisateur",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       },
@@ -233,6 +252,29 @@
                 "description": "Le slice auth écoute les actions de mise à jour de photo de profil et de profil utilisateur du slice users via extraReducers, gardant l'objet current-user synchronisé avec localStorage sans dupliquer l'état ni créer d'imports circulaires."
               }
             ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Administrateur",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "Recruteur",
+            "data": {
+              "email": "recruiter@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "Utilisateur",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
           }
         ]
       }
