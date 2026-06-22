@@ -244,7 +244,7 @@ describe("TestimonialsPage", () => {
     it("renders Ahmed's name from data (not i18n) inside the active card", () => {
       renderPage(0);
       const panel = screen.getByRole("tabpanel");
-      expect(within(panel).getByText("Ahmed Iben Daoud")).toBeInTheDocument();
+      expect(within(panel).getByText("Ahmed Iben")).toBeInTheDocument();
     });
 
     /**

@@ -10,12 +10,12 @@ export interface Testimonial {
 }
 
 export const TESTIMONIALS = [
-  { id: "t1", name: "Ahmed", translationKey: "ahmed", rating: 5 },
+  { id: "t1", name: "Ahmed Iben", translationKey: "ahmed", rating: 5 },
   {
     id: "t2",
-    name: "Mustapha",
+    name: "Mustapha Bou",
     translationKey: "mustapha",
     rating: 5,
   },
-  { id: "t3", name: "Asma", translationKey: "asma", rating: 5 },
+  { id: "t3", name: "Asma Ben", translationKey: "asma", rating: 5 },
 ] as const satisfies readonly Testimonial[];
