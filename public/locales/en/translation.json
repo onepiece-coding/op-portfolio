@@ -277,6 +277,96 @@
             }
           }
         ]
+      },
+      "op-market": {
+        "title": "op-market — Zero-Dependency Full-Stack E-Commerce Platform",
+        "summary": "A production-grade online store built on a deliberate constraint: the React frontend ships with zero UI, state, or data-fetching libraries beyond React Router. Every system — caching, forms, modals, notifications — is engineered from scratch, paired with a secure Express and PostgreSQL backend featuring rotating refresh tokens and a full PayPal Checkout integration.",
+        "groups": [
+          {
+            "groupTitle": "Custom Caching & Data Layer",
+            "features": [
+              {
+                "name": "Hand-Built Cache Store",
+                "description": "A Map-based cache store built on React's useSyncExternalStore, with a subscribe/notify system that updates only the components watching a specific piece of data — no external state library, no unnecessary re-render storms."
+              },
+              {
+                "name": "Deterministic Keys & Request Deduplication",
+                "description": "Query parameters are sorted before being hashed into cache keys, so identical requests fired from unrelated components always resolve to the same cache entry — and concurrent duplicate fetches are automatically merged into a single network call."
+              },
+              {
+                "name": "Three Deliberate Invalidation Strategies",
+                "description": "Exact-key removal, prefix-wide invalidation, and in-place merge updates are each chosen per mutation type — so an admin product edit reflects on the live storefront instantly, with zero manual refresh anywhere in the app."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Authentication & Payment Security",
+            "features": [
+              {
+                "name": "Rotating Refresh Tokens with Request Queueing",
+                "description": "Concurrent 401 responses trigger a single deduplicated silent token refresh instead of a storm of parallel refresh calls, with every pending request automatically replayed once the new token is issued."
+              },
+              {
+                "name": "Full PayPal Checkout Integration",
+                "description": "A complete create → approve → capture/cancel payment lifecycle, with real browser redirects to PayPal's own checkout and an idempotent capture endpoint that safely tolerates page reloads mid-confirmation."
+              },
+              {
+                "name": "Tokenised Email Verification & Password Reset",
+                "description": "Secure, expiring links for account verification and password recovery — resetting a password automatically revokes every active refresh token on the account, locking out any compromised session."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Admin Dashboard & Real Safeguards",
+            "features": [
+              {
+                "name": "Code-Split Admin Panel",
+                "description": "The entire admin dashboard is lazy-loaded via React.lazy and Suspense, so its code never ships to an anonymous shopper browsing the storefront — only fetched the moment an authenticated admin navigates there."
+              },
+              {
+                "name": "Full Product, Order & User Management",
+                "description": "Complete CRUD for the product catalogue with Cloudinary image uploads, an order status workflow from pending to delivered, and role-based user management, all backed by paginated, filterable, cached tables."
+              },
+              {
+                "name": "Self-Lockout Prevention",
+                "description": "The backend has no built-in protection against an admin demoting their own account and losing dashboard access — so the frontend disables that specific action for your own account, a safeguard we designed in after spotting the gap."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Performance, Accessibility & SEO",
+            "features": [
+              {
+                "name": "Race-Condition-Safe Cart Updates",
+                "description": "Cart quantity changes are disabled mid-mutation and merged directly into the cache on success, preventing out-of-order responses from silently saving the wrong quantity — with memoised product cards that skip re-rendering on every search keystroke."
+              },
+              {
+                "name": "Accessibility Built In, Not Bolted On",
+                "description": "Skip-to-content links, focus restored to the page's main landmark on every route change, a real keyboard focus trap in every modal, and ARIA-correct tables, forms, and live regions throughout."
+              },
+              {
+                "name": "SEO Within a Single-Page App's Real Limits",
+                "description": "Per-page meta tags, canonical links, and schema.org JSON-LD structured data on every product page — with noindex correctly applied to authenticated routes a crawler should never index."
+              }
+            ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Admin",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "User",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
+          }
+        ]
       }
     }
   },

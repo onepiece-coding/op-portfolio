@@ -38,4 +38,18 @@ export const PROJECTS: readonly Project[] = [
     githubRepoUrl: "https://github.com/onepiece-coding/OP-CareerHub",
     liveDemoUrl: "https://op-career-hub-frontend.vercel.app/",
   },
+  {
+    id: "op-market",
+    tech: [
+      "PostgreSQL",
+      "Express.js",
+      "TypeScript",
+      "Vitest",
+      "Prisma",
+      "Vite",
+      "React",
+    ],
+    githubRepoUrl: "https://github.com/onepiece-coding/OP-Market",
+    liveDemoUrl: "https://onepiece-coding.github.io/op-market-shop",
+  },
 ] as const satisfies readonly Project[];
