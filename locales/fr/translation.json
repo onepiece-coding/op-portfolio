@@ -277,6 +277,96 @@
             }
           }
         ]
+      },
+      "op-market": {
+        "title": "op-market — Plateforme E-Commerce Full-Stack Sans Dépendances",
+        "summary": "Une boutique en ligne de niveau production construite sur une contrainte délibérée : le frontend React ne dépend que de React Router, sans aucune bibliothèque UI, de gestion d'état ou de data-fetching. Chaque système — cache, formulaires, modales, notifications — est conçu de zéro, associé à un backend Express et PostgreSQL sécurisé avec tokens de rafraîchissement rotatifs et une intégration complète de PayPal Checkout.",
+        "groups": [
+          {
+            "groupTitle": "Cache Personnalisé & Couche de Données",
+            "features": [
+              {
+                "name": "Store de Cache Fait Main",
+                "description": "Un store de cache basé sur une Map, construit sur useSyncExternalStore de React, avec un système subscribe/notify qui ne met à jour que les composants observant une donnée précise — sans bibliothèque d'état externe, sans rafales de re-rendus inutiles."
+              },
+              {
+                "name": "Clés Déterministes & Déduplication des Requêtes",
+                "description": "Les paramètres de requête sont triés avant d'être hashés en clés de cache, garantissant que des requêtes identiques venant de composants différents pointent toujours vers la même entrée de cache — et les requêtes concurrentes en double sont automatiquement fusionnées en un seul appel réseau."
+              },
+              {
+                "name": "Trois Stratégies d'Invalidation Délibérées",
+                "description": "Suppression par clé exacte, invalidation par préfixe et fusion en place sont choisies au cas par cas selon le type de mutation — une modification de produit dans l'admin se reflète instantanément sur la boutique en ligne, sans aucun rafraîchissement manuel."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Authentification & Sécurité des Paiements",
+            "features": [
+              {
+                "name": "Tokens de Rafraîchissement Rotatifs avec File d'Attente",
+                "description": "Les réponses 401 concurrentes déclenchent un seul rafraîchissement silencieux dédupliqué au lieu d'une rafale d'appels parallèles, avec rejeu automatique de chaque requête en attente une fois le nouveau token émis."
+              },
+              {
+                "name": "Intégration Complète de PayPal Checkout",
+                "description": "Un cycle de paiement complet création → approbation → capture/annulation, avec de véritables redirections vers le checkout PayPal et un endpoint de capture idempotent qui tolère sans risque un rechargement de page en pleine confirmation."
+              },
+              {
+                "name": "Vérification E-mail & Réinitialisation de Mot de Passe Tokenisées",
+                "description": "Liens sécurisés et à expiration pour la vérification de compte et la récupération de mot de passe — réinitialiser un mot de passe révoque automatiquement tous les tokens de rafraîchissement actifs du compte, expulsant toute session compromise."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Tableau de Bord Admin & Garde-fous Réels",
+            "features": [
+              {
+                "name": "Panneau d'Administration Code-Splitté",
+                "description": "L'ensemble du tableau de bord admin est chargé paresseusement via React.lazy et Suspense, si bien que son code n'est jamais livré à un visiteur anonyme parcourant la boutique — récupéré uniquement lorsqu'un admin authentifié y accède."
+              },
+              {
+                "name": "Gestion Complète des Produits, Commandes & Utilisateurs",
+                "description": "CRUD complet du catalogue produits avec upload d'images via Cloudinary, un workflow de statut de commande de « en attente » à « livré », et une gestion des rôles utilisateurs, le tout sur des tableaux paginés, filtrables et mis en cache."
+              },
+              {
+                "name": "Prévention de l'Auto-Exclusion",
+                "description": "Le backend n'offre aucune protection contre un admin qui rétrograderait son propre compte et perdrait l'accès au tableau de bord — le frontend désactive donc cette action précise sur son propre compte, un garde-fou ajouté après avoir identifié la faille."
+              }
+            ]
+          },
+          {
+            "groupTitle": "Performance, Accessibilité & SEO",
+            "features": [
+              {
+                "name": "Mises à Jour du Panier Sans Conditions de Course",
+                "description": "Les changements de quantité désactivent le contrôle pendant la mutation et fusionnent le résultat directement dans le cache en cas de succès, empêchant des réponses désordonnées d'enregistrer silencieusement la mauvaise quantité — avec des cartes produit mémoïsées qui ignorent le re-rendu à chaque frappe de recherche."
+              },
+              {
+                "name": "Accessibilité Intégrée, Pas Ajoutée Après Coup",
+                "description": "Liens d'évitement vers le contenu principal, focus restauré sur la zone principale à chaque changement de route, un vrai piège à focus clavier dans chaque modale, et des tableaux, formulaires et zones live conformes ARIA partout."
+              },
+              {
+                "name": "SEO Dans les Limites Réelles d'une Single-Page App",
+                "description": "Balises meta par page, liens canoniques et données structurées JSON-LD schema.org sur chaque page produit — avec un noindex correctement appliqué aux routes authentifiées qu'un robot ne devrait jamais indexer."
+              }
+            ]
+          }
+        ],
+        "credentials": [
+          {
+            "label": "Administrateur",
+            "data": {
+              "email": "admin@email.com",
+              "password": "Pass@1234"
+            }
+          },
+          {
+            "label": "Utilisateur",
+            "data": {
+              "email": "user@email.com",
+              "password": "Pass@1234"
+            }
+          }
+        ]
       }
     }
   },
