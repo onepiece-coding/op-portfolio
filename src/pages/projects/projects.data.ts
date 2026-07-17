@@ -11,18 +11,18 @@ export interface Project {
 
 export const PROJECTS: readonly Project[] = [
   {
-    id: "op-blog",
+    id: "op-market",
     tech: [
-      "Redux Toolkit",
-      "Jest/Vitest",
+      "PostgreSQL",
       "Express.js",
       "TypeScript",
-      "Node.js",
-      "MongoDB",
+      "Vitest",
+      "Prisma",
+      "Vite",
       "React",
     ],
-    githubRepoUrl: "https://github.com/onepiece-coding/OP-Blog",
-    liveDemoUrl: "https://op-blog-frontend.vercel.app/",
+    githubRepoUrl: "https://github.com/onepiece-coding/OP-Market",
+    liveDemoUrl: "https://onepiece-coding.github.io/op-market-shop",
   },
   {
     id: "careerhub",
@@ -39,17 +39,17 @@ export const PROJECTS: readonly Project[] = [
     liveDemoUrl: "https://op-career-hub-frontend.vercel.app/",
   },
   {
-    id: "op-market",
+    id: "op-blog",
     tech: [
-      "PostgreSQL",
+      "Redux Toolkit",
+      "Jest/Vitest",
       "Express.js",
       "TypeScript",
-      "Vitest",
-      "Prisma",
-      "Vite",
+      "Node.js",
+      "MongoDB",
       "React",
     ],
-    githubRepoUrl: "https://github.com/onepiece-coding/OP-Market",
-    liveDemoUrl: "https://onepiece-coding.github.io/op-market-shop",
+    githubRepoUrl: "https://github.com/onepiece-coding/OP-Blog",
+    liveDemoUrl: "https://op-blog-frontend.vercel.app/",
   },
 ] as const satisfies readonly Project[];

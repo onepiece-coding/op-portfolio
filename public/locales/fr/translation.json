@@ -279,7 +279,7 @@
         ]
       },
       "op-market": {
-        "title": "op-market — Plateforme E-Commerce Full-Stack Sans Dépendances",
+        "title": "op-market — Plateforme E-Commerce Full-Stack",
         "summary": "Une boutique en ligne de niveau production construite sur une contrainte délibérée : le frontend React ne dépend que de React Router, sans aucune bibliothèque UI, de gestion d'état ou de data-fetching. Chaque système — cache, formulaires, modales, notifications — est conçu de zéro, associé à un backend Express et PostgreSQL sécurisé avec tokens de rafraîchissement rotatifs et une intégration complète de PayPal Checkout.",
         "groups": [
           {
