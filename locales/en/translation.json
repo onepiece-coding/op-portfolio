@@ -279,7 +279,7 @@
         ]
       },
       "op-market": {
-        "title": "op-market — Zero-Dependency Full-Stack E-Commerce Platform",
+        "title": "op-market — Full-Stack E-Commerce Platform",
         "summary": "A production-grade online store built on a deliberate constraint: the React frontend ships with zero UI, state, or data-fetching libraries beyond React Router. Every system — caching, forms, modals, notifications — is engineered from scratch, paired with a secure Express and PostgreSQL backend featuring rotating refresh tokens and a full PayPal Checkout integration.",
         "groups": [
           {
