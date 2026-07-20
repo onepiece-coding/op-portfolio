@@ -365,6 +365,13 @@
               "email": "user@email.com",
               "password": "Pass@1234"
             }
+          },
+          {
+            "label": "PayPal",
+            "data": {
+              "email": "sb-jm1bo50147124@personal.example.com",
+              "password": "H!we}8,k"
+            }
           }
         ]
       }

@@ -39,8 +39,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
     returnObjects: true, // use returnObjects: true to get the groups array
   }) as Credentials[];
 
-  console.log(credentials);
-
   return (
     <Card ariaLabelledby={`${project.id}-title`} hoverable as="li">
       <div className={styles.projectHead}>
